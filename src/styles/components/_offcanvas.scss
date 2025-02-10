@@ -1,0 +1,28 @@
+.offcanvas {
+  background-color: #222; // Mörk bakgrund
+  color: white;
+  width: 250px; // Smalare meny
+  max-width: 80%; // För bättre responsivitet på mindre skärmar
+  transition: transform 0.3s ease-in-out;
+
+  .offcanvas-header {
+    background: #111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .offcanvas-body {
+    padding: 20px;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #ffcc00;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate-scss-parcel",
+  "version": "1.0.0",
+  "type": "module",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir dist",
+    "sass": "sass --watch scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarasjodin/boilerplate-scss-parcel.git"
+  },
+  "author": "Sara Sjodin Scolari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarasjodin/boilerplate-scss-parcel/issues"
+  },
+  "homepage": "https://github.com/sarasjodin/boilerplate-scss-parcel#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.13.3",
+    "bootstrap": "5.3.3",
+    "normalize-url": "8.0.1",
+    "parcel": "^2.13.3",
+    "sass": "1.84.0",
+    "stylelint": "16.14.1",
+    "stylelint-scss": "6.11.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
+  }
+}

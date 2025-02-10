@@ -1,0 +1,36 @@
+// 1. Abstrakta moduler (variabler, mixins, functions)
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+// 2. Basstilar (reset, typografi, grundläggande element)
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/global';
+
+// 3. Layout (grid, header, footer, etc.)
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+@use 'layout/sidebar';
+
+// 4. Komponenter (buttons, cards, modals etc.)
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/modals';
+@use 'components/offcanvas';
+
+// 5. Sid-specifika stilar (om tillämpligt)
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/process';
+@use 'pages/sass';
+
+// 6. Teman (valfritt, om du använder teman)
+@use 'themes/dark';
+@use 'themes/light';
+
+// 7. Vendor-stilar (exempelvis Bootstrap, externa bibliotek)
+@use 'vendors/normalize';
+@use 'bootstrap/scss/bootstrap';
