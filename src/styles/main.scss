@@ -1,7 +1,7 @@
 // 1. Abstrakta moduler (variabler, mixins, functions)
 @use 'abstracts/variables';
-@use 'abstracts/mixins';
 @use 'abstracts/functions';
+@use 'abstracts/mixins';
 
 // 2. Basstilar (reset, typografi, grundläggande element)
 @use 'base/reset';
@@ -20,6 +20,7 @@
 @use 'components/forms';
 @use 'components/modals';
 @use 'components/offcanvas';
+@use 'components/icons';
 
 // 5. Sid-specifika stilar (om tillämpligt)
 @use 'pages/home';
@@ -33,4 +34,4 @@
 
 // 7. Vendor-stilar (exempelvis Bootstrap, externa bibliotek)
 @use 'vendors/normalize';
-@use 'bootstrap/scss/bootstrap';
+@use 'vendors/bootstrap';

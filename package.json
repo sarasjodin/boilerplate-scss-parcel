@@ -26,15 +26,18 @@
   "homepage": "https://github.com/sarasjodin/boilerplate-scss-parcel#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "2.13.3",
-    "bootstrap": "5.3.3",
     "normalize-url": "8.0.1",
     "parcel": "^2.13.3",
     "sass": "1.84.0",
     "stylelint": "16.14.1",
-    "stylelint-scss": "6.11.0"
+    "stylelint-scss": "6.11.0",
+    "svgo": "3.3.2"
   },
   "engines": {
     "node": ">=22.0.0",
     "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3"
   }
 }

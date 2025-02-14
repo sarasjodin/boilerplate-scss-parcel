@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Bas
+.icon {
+  @include icon-base($icon-size, $icon-shape);
+}
+
+// Form
+.circle {
+  @include icon-base($icon-size, 'circle');
+}
+
+.square {
+  @include icon-base($icon-size, 'square');
+}
+
+// Färg
+.icon-white {
+  @include icon-white($icon-bg-color, $icon-size);
+}
+
+.icon-bw {
+  @include icon-bw($icon-bw-bg-color, $icon-size);
+}

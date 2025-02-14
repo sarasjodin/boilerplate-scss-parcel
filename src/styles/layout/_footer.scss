@@ -1,0 +1,17 @@
+@use '../components/icons';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 20px;
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+li.social-icon:nth-child(5) img {
+  transform: translate(1.8px, -0.8px);
+}

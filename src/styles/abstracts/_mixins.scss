@@ -1,0 +1,51 @@
+@use 'variables' as *; // Importera variabler
+
+// Grund mixin ikon
+@mixin icon-base($size: $icon-size, $shape: $icon-shape) {
+  width: $size;
+  height: $size;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+
+  // Standardform
+  @if $shape == 'circle' {
+    border-radius: 50%;
+  } @else if $shape == 'square' {
+    border-radius: 8px !important;
+  }
+}
+
+// Mixin helvit ikon
+@mixin icon-white($bg-color: #333, $size: 40px) {
+  @include icon-base($size);
+  background-color: $bg-color;
+
+  img {
+    filter: brightness(0) invert(1); // Gör ikonen vit
+  }
+
+  @include icon-hover(); // Standard hover-effekt
+}
+
+// Mixin svartvit ikon
+@mixin icon-bw($bg-color: #fff, $size: 40px) {
+  @include icon-base($size);
+  background-color: $bg-color;
+
+  img {
+    filter: grayscale(100%);
+  }
+
+  @include icon-hover(); // Standard hover-effekt
+}
+
+@mixin icon-hover($hover-bg: red, $scale: 1.1) {
+  &:hover {
+    background-color: $hover-bg !important;
+    transform: scale($scale);
+  }
+}
