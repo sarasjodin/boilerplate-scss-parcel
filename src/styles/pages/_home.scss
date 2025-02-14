@@ -1,4 +1,10 @@
-$primary-color: blue;
+@use '../abstracts//variables' as *;
+
 body {
   background-color: $primary-color;
+}
+
+.home {
+  padding: 20px;
+  text-align: center;
 }

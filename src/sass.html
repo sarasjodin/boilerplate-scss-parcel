@@ -4,68 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.scss" />
-    <link
+    <link rel="stylesheet" href="styles/main.scss" />
+    <!-- <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E"
-    />
-    <!--<link rel="stylesheet" href="styles/main.scss" />-->
+    /> -->
     <title>Sass | Sassy Sheets med scss-syntax</title>
-    <script src="scripts/index.js" type="module"></script>
+    <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
-      <header class="menu">
-        <!-- <div class="logo-container">
-          <img src="./images/logo-01.svg" alt="Company Logo" class="logo" />
-          <span class="company-name">CompanyName</span>
-        </div>
-        <button class="hamburger-menu" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button> -->
+      <header class="navbar">
+        <div class="container">
+          <!-- Logo och företagsnamn -->
+          <a href="index.html" class="logo">
+            <img src="../src/images/logo-01.svg" alt="Företagslogotyp" />
+            <span class="company-name">Sassy Sara</span>
+          </a>
 
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="index.html">Min Hemsida</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <!-- Sökfält -->
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Sök..." />
           </div>
-        </nav>
 
-        <div
-          class="offcanvas offcanvas-start text-bg-dark"
-          id="offcanvasNavbar"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Meny</h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav">
+          <!-- Hamburgermeny-knapp -->
+          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+
+          <!-- Navigationsmeny -->
+          <nav class="nav">
+            <ul class="menu">
               <li><a href="index.html">Hem</a></li>
+              <li><a href="about.html">Om mig</a></li>
               <li><a href="process.html">Process</a></li>
               <li><a href="#">Sass</a></li>
-              <li><a href="about.html">Om uppgiften</a></li>
+              <li class="dropdown">
+                <a href="#">Produkter ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Produkt 1</a></li>
+                  <li><a href="#">Produkt 2</a></li>
+                  <li><a href="#">Produkt 3</a></li>
+                </ul>
+              </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </header>
       <main>
-        <section></section>
-
-        <section></section>
+        <section>
+          <h1>Mer om min "sassy webbplats"</h1>
+          <p>
+            Uppgiften ingår i Webbutvecklingsprogrammet på Mittuniversitetet och
+            består i att skapa en webbplats med hjälp av Nodejs, Npm, Parcel och
+            Sass (scss).
+          </p>
+          <h2>Syfte med uppgiften</h2>
+          <ul>
+            <li>Förstå syftet med CSS-preprocessorer.</li>
+            <li>Kunna använda SASS för att underlätta utveckling med CSS.</li>
+            <li>
+              Praktiskt använda utvecklings-miljön du skapade i tidigare moment.
+            </li>
+            <li>Kunna automatisera konvertering av SASS-filer med Parcel.</li>
+          </ul>
+        </section>
+        <section>
+          Minimumkrav:
+          <ul>
+            <li>
+              Enkel, fiktiv webbplats med minst 5 menyval (men alla behöver inte
+              vara valbara)
+            </li>
+            <li>Minst två HTML-sidor (en startsida och en undersida Sass)</li>
+            <li>
+              Baserat på en Parcel boilerplate, men inte återanvända gammal css
+            </li>
+            <li>Variabler (minst färgschema ska lagras i variabler)</li>
+            <li>
+              Color functions (darken och lighten ska som minst användas, men
+              använd gärna fler)
+            </li>
+            <li>Nesting Mixins Selector inheritance (nyckelordet "@extend")</li>
+            <li>
+              If/else-satser. Minst en partial Partials med en god filstruktur
+              för CSS-kod
+            </li>
+            <li>
+              Ej FTP/SFTP webbhost men t.ex. Github Pages, Netlify, Vercel eller
+              Render.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Min utvärdering</h2>
+          <h3>För- och nackdelar med CSS-preprocessorn Sass?</h3>
+          <p>Mer text här</p>
+          <h3>
+            Hur var det att komma igång att arbete med en CSS-preprocessor?
+          </h3>
+          <p>Mer text här</p>
+        </section>
       </main>
 
       <footer class="footer">

@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+    height: $header-height;
+    background: $dark-bg;
+    color: $white;
+    @include flex-center;
+}

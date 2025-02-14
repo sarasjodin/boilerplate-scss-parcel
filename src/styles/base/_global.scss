@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+
 body {
-  padding-top: 56px;
+  font-family: $font-stack;
+  background-color: $gray-100;
 }

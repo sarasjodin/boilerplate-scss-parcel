@@ -1,11 +1,29 @@
+@use 'sass:color'; // Om du använder Sass färgfunktioner
+
+$icon-size: 36px;
+$icon-shape: 'circle'; // Standardform för alla ikoner
+$gray-100: rgb(233, 233, 233);
+$white: white;
+/* $light-bg-subtle: mix($gray-100, $white) !default; */
+
 // abstracts/variables.scss
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
 $font-stack: 'Helvetica, Arial, sans-serif';
 
 // Standardvärden för ikoner
-$icon-size: 40px;
-$icon-bg-color: #333;
-$icon-shape: 'circle'; // Standardform för alla ikoner
 
-$icon-bw-bg-color: red;
+$icon-bg-color: #333;
+$icon-bw-bg-color: #333;
+$font-stack: 'Helvetica, Arial, sans-serif';
+$dark-bg: #333;
+
+// Storlekar
+$icon-size: 48px;
+$header-height: 60px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

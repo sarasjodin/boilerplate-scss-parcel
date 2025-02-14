@@ -1,4 +1,11 @@
-@use 'variables' as *; // Importera variabler
+@use '../abstracts//variables' as *;
+
+@mixin icon-hover($hover-bg: rgb(95, 101, 144), $scale: 1.1) {
+  &:hover {
+    background-color: $hover-bg !important;
+    transform: scale($scale);
+  }
+}
 
 // Grund mixin ikon
 @mixin icon-base($size: $icon-size, $shape: $icon-shape) {
@@ -27,25 +34,44 @@
   img {
     filter: brightness(0) invert(1); // Gör ikonen vit
   }
-
-  @include icon-hover(); // Standard hover-effekt
+  @include icon-hover();
 }
 
 // Mixin svartvit ikon
 @mixin icon-bw($bg-color: #fff, $size: 40px) {
   @include icon-base($size);
-  background-color: $bg-color;
+  background-color: $bg-color !important;
 
   img {
     filter: grayscale(100%);
   }
-
-  @include icon-hover(); // Standard hover-effekt
+  @include icon-hover();
 }
 
-@mixin icon-hover($hover-bg: red, $scale: 1.1) {
-  &:hover {
-    background-color: $hover-bg !important;
-    transform: scale($scale);
+// Flexbox centrering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Media Query Mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
   }
 }

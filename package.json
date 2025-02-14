@@ -10,9 +10,8 @@
     "not op_mini all"
   ],
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir dist",
-    "sass": "sass --watch scss/main.scss css/main.css"
+    "start": "parcel src/index.html src/about.html src/process.html src/sass.html",
+    "build": "parcel build src/styles/main.scss src/index.html src/about.html src/process.html src/sass.html --dist-dir dist --no-content-hash --no-source-maps --public-url ."
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.13.3",
     "normalize-url": "8.0.1",
-    "parcel": "^2.13.3",
+    "parcel": "2.13.3",
     "sass": "1.84.0",
     "stylelint": "16.14.1",
     "stylelint-scss": "6.11.0",
@@ -36,8 +35,5 @@
   "engines": {
     "node": ">=22.0.0",
     "preinstall": "npm -v | grep '9.' || (echo '⚠️ Please use npm 9.x' && exit 1)"
-  },
-  "dependencies": {
-    "bootstrap": "5.3.3"
   }
 }
