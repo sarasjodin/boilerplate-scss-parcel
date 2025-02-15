@@ -10,6 +10,7 @@
     "not op_mini all"
   ],
   "scripts": {
+    "build": "parcel build src/styles/main.scss src/index.html src/about.html src/process.html src/sass.html --log-level verbose --dist-dir dist/ --public-url ./ && node fix-html-paths.js",
     "clean:local": "if exist .parcel-cache rmdir /s /q .parcel-cache & if exist dist rmdir /s /q dist",
     "build:dev": "npm run clean:local && parcel build src/index.html src/about.html src/process.html src/sass.html --dist-dir dist/",
     "start:dev": "npx parcel src/*.html",
