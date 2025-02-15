@@ -2,69 +2,69 @@
 @use '../abstracts/mixins' as *;
 
 .navbar {
-    background: $dark-bg;
+  background: $dark-bg;
+  color: $white;
+  padding: 15px 20px;
+
+  .container {
+    @include flex-center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: $white;
-    padding: 15px 20px;
+    font-size: 1.5rem;
 
-    .container {
-        @include flex-center;
-        justify-content: space-between;
-        max-width: 1600px;
-        margin: auto;
+    img {
+      height: 40px;
+      margin-right: 10px;
     }
+  }
 
-    .logo {
-        display: flex;
-        align-items: center;
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+      position: relative;
+
+      a {
         text-decoration: none;
         color: $white;
-        font-size: 1.5rem;
-
-        img {
-            height: 40px;
-            margin-right: 10px;
-        }
+        padding: 10px 15px;
+        display: block;
+      }
     }
-
-    .menu {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-
-        li {
-            position: relative;
-
-            a {
-                text-decoration: none;
-                color: $white;
-                padding: 10px 15px;
-                display: block;
-            }
-        }
-    }
+  }
 }
 
 /* Små enheter (mobil) */
 @include respond-to(sm) {
-    .menu {
-        display: none;
-    }
+  .menu {
+    display: none;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* Tablets (stående) */
 @include respond-to(md) {
-    .company-name {
-        display: inline;
-    }
+  .company-name {
+    display: inline;
+  }
 }
 
 /* Större skärmar */
 @include respond-to(xl) {
-    .search-container {
-        display: block;
-    }
+  .search-container {
+    display: block;
+  }
 }

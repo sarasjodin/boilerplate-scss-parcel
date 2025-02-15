@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+/* import '../styles/main.scss'; */
 
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -28,4 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
       dropdown.querySelector('.dropdown-menu').style.display = 'none';
     });
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const section = document.querySelector('section');
+  console.log('Section element before modification:', section);
+  console.log('Section innerHTML before modification:', section.innerHTML);
 });

@@ -1,8 +1,9 @@
+@charset "UTF-8";
+
 // 1. Abstrakta moduler (variabler, mixins, functions)
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
-@use 'abstracts/functions';
-@use 'abstracts/index';
+@forward 'abstracts/variables';
+@forward 'abstracts/mixins';
+@forward 'abstracts/functions';
 
 // 2. Basstilar (reset, typografi, grundläggande element)
 @use 'base/reset';
@@ -24,7 +25,7 @@
 @use 'components/icons';
 
 // 5. Sid-specifika stilar (om tillämpligt)
-@use 'pages/home';
+@use 'pages/index';
 @use 'pages/about';
 @use 'pages/process';
 @use 'pages/sass';
