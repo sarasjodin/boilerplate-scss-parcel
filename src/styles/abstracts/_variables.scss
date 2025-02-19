@@ -1,29 +1,88 @@
-@use 'sass:color'; // Om du använder Sass färgfunktioner
+@use 'sass:color'; // Importera Sass färgfunktioner
 
-$icon-size: 36px;
-$icon-shape: 'circle'; // Standardform för alla ikoner
-$gray-100: rgb(233, 233, 233);
-$white: white;
-/* $light-bg-subtle: mix($gray-100, $white) !default; */
+// Färgpalett
+$colors: (
+  'primary': #3498db,
+  'secondary': #2ecc71,
+  'gray-100': rgb(233, 233, 233),
+  'white': #ffffff,
+  'dark-bg': #333,
+  'icon-bg': #333
+);
 
-// abstracts/variables.scss
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
+// Typografi
 $font-stack: 'Helvetica, Arial, sans-serif';
 
-// Standardvärden för ikoner
-
-$icon-bg-color: #333;
-$icon-bw-bg-color: #333;
-$font-stack: 'Helvetica, Arial, sans-serif';
-$dark-bg: #333;
-
-// Storlekar
-$icon-size: 48px;
 $header-height: 60px;
+$sizes: (
+  'icon': 32px,
+  'header-height': 60px
+);
+
+$icon-shape: 'circle'; // Standardform
+$icon-header-height: map-get($sizes, 'header-height');
+$icon-size: map-get($sizes, 'icon');
 
 // Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoints: (
+  'xs': 360px,
+  // Små mobiler (extra liten) Små mobiler som iPhone SE och vissa Android-enheter
+  'sm': 480px,
+  // Standard mobiler Mer standardstorlek för mobiler
+  'md': 768px,
+  // Tablets
+  'lg': 1024px,
+  // Små laptops & större surfplattor
+  'xl': 1280px,
+  // Standard desktop
+  'xxl': 1600px // Maxbredd – större skärmar centreras
+);
+
+// Teman
+$dark-theme: (
+  'bg': #121212,
+  // Bakgrundsfärg
+  'text': #e5e7eb,
+  // Standardtext
+  'primary': #2b7aaf,
+  // Primärfärg (t.ex. knappar, länkar)
+  'secondary': #c5e0b3,
+  // Sekundärfärg (t.ex. highlights)
+  'accent': #e467e7,
+  // Accentfärg (t.ex. hover-effekter, CTA)
+  'error': #ed8b8b // Felmeddelanden
+);
+
+$light-theme: (
+  'bg': #f9fafb,
+  // Bakgrundsfärg
+  'text': #1f2937,
+  // Standardtext
+  'primary': #1f6fc7,
+  // Primärfärg (t.ex. knappar, länkar)
+  'secondary': #26fadc,
+  // Sekundärfärg (t.ex. highlights)
+  'accent': #f59e0b,
+  // Accentfärg (t.ex. hover-effekter, CTA)
+  'error': #dc2626 // Felmeddelanden
+);
+
+// Standard transitions
+$default-transition: background-color 0.3s ease, color 0.3s ease;
+$icon-transition: background-color 0.3s ease, transform 0.3s ease;
+$button-transition: background-color 0.3s ease, color 0.3s ease,
+  border 0.3s ease;
+
+// Standard animationer
+$fade-duration: 0.5s;
+$fade-animation: fade-in $fade-duration forwards;
+
+// Keyframe för fade-in
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

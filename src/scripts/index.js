@@ -30,8 +30,29 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const section = document.querySelector('section');
-  console.log('Section element before modification:', section);
-  console.log('Section innerHTML before modification:', section.innerHTML);
+// Byt tema
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+  // Uppdatera knappens text
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.textContent = '☀️ Light Mode';
+  } else {
+    themeToggle.textContent = '🌙 Dark Mode';
+  }
+
+  // Spara temat i LocalStorage
+  localStorage.setItem(
+    'theme',
+    body.classList.contains('dark-mode') ? 'dark' : 'light'
+  );
 });
+
+// Kolla användarens sparade inställning
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.textContent = '☀️ Light Mode';
+}

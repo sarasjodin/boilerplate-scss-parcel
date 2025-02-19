@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+body {
+  background-color: map-get($light-theme, 'bg');
+  color: map-get($light-theme, 'text');
+  transition: $default-transition;
+}
+
+// Mörkt läge via media query
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: map-get($dark-theme, 'bg');
+    color: map-get($dark-theme, 'text');
+  }
+}
+
+.dark-mode {
+  transition: $default-transition;
+  opacity: 0;
+  animation: $fade-animation;
+}

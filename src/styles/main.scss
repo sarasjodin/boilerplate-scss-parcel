@@ -31,8 +31,7 @@
 @use 'pages/sass';
 
 // 6. Teman (valfritt, om du använder teman)
-@use 'themes/dark';
-@use 'themes/light';
+@use 'themes/theme';
 
 // 7. Vendor-stilar (exempelvis Bootstrap, externa bibliotek)
 @use 'vendors/normalize';

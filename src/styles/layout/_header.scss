@@ -2,8 +2,14 @@
 @use '../abstracts/mixins' as *;
 
 .header {
-    height: $header-height;
-    background: $dark-bg;
-    color: $white;
-    @include flex-center;
+  height: $header-height;
+  background: map-get($light-theme, 'bg');
+  color: map-get($light-theme, 'text');
+  @include flex-center;
+}
+
+// Mörkt tema
+.dark-mode .header {
+  background: map-get($dark-theme, 'bg');
+  color: map-get($dark-theme, 'text');
 }

@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as *;
 
-@mixin icon-hover($hover-bg: rgb(95, 101, 144), $scale: 1.1) {
+@mixin icon-hover($theme: $light-theme, $scale: 1.1) {
   &:hover {
-    background-color: $hover-bg !important;
+    background-color: map-get($theme, 'accent') !important;
     transform: scale($scale);
   }
 }
@@ -27,25 +27,27 @@
 }
 
 // Mixin helvit ikon
-@mixin icon-white($bg-color: #333, $size: 40px) {
+@mixin icon-white($theme: $light-theme, $size: 40px) {
   @include icon-base($size);
-  background-color: $bg-color;
+  background-color: map-get($theme, 'primary');
 
   img {
     filter: brightness(0) invert(1); // Gör ikonen vit
   }
-  @include icon-hover();
+
+  @include icon-hover($theme);
 }
 
 // Mixin svartvit ikon
-@mixin icon-bw($bg-color: #fff, $size: 40px) {
+@mixin icon-bw($theme: $light-theme, $size: 40px) {
   @include icon-base($size);
-  background-color: $bg-color !important;
+  background-color: map-get($theme, 'secondary') !important;
 
   img {
     filter: grayscale(100%);
   }
-  @include icon-hover();
+
+  @include icon-hover($theme);
 }
 
 // Flexbox centrering
@@ -56,22 +58,8 @@
 }
 
 // Media Query Mixin
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == sm {
-    @media (max-width: $breakpoint-sm) {
-      @content;
-    }
-  } @else if $breakpoint == md {
-    @media (max-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $breakpoint == lg {
-    @media (max-width: $breakpoint-lg) {
-      @content;
-    }
-  } @else if $breakpoint == xl {
-    @media (max-width: $breakpoint-xl) {
-      @content;
-    }
+@mixin responsive($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
   }
 }

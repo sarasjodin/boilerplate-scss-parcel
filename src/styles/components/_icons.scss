@@ -15,11 +15,30 @@
   @include icon-base($icon-size, 'square');
 }
 
-// Färg
+// Ikoner för ljust tema (default)
 .icon-white {
-  @include icon-white($icon-bg-color, $icon-size);
+  @include icon-white($light-theme);
 }
 
 .icon-bw {
-  @include icon-bw($icon-bw-bg-color, $icon-size);
+  @include icon-bw($light-theme);
+}
+
+// Ikoner för mörkt tema (ändras med .dark-mode)
+.dark-mode {
+  .icon-white {
+    @include icon-white($dark-theme);
+  }
+
+  .icon-bw {
+    @include icon-bw($dark-theme);
+  }
+}
+
+.social-icon {
+  transition: $icon-transition;
+}
+
+.dark-mode .social-icon {
+  transition: $icon-transition;
 }

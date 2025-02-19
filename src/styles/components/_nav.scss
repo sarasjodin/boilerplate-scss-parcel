@@ -2,8 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .navbar {
-  background: $dark-bg;
-  color: $white;
+  background: map-get($colors, 'dark-bg');
+  color: map-get($colors, 'white');
   padding: 15px 20px;
 
   .container {
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: $white;
+    color: map-get($colors, 'white');
     font-size: 1.5rem;
 
     img {
@@ -36,7 +36,7 @@
 
       a {
         text-decoration: none;
-        color: $white;
+        color: map-get($colors, 'white');
         padding: 10px 15px;
         display: block;
       }
@@ -45,7 +45,7 @@
 }
 
 /* Små enheter (mobil) */
-@include respond-to(sm) {
+/* @include respond-to(sm) {
   .menu {
     display: none;
   }
@@ -53,18 +53,19 @@
   .menu-toggle {
     display: block;
   }
-}
+} */
 
 /* Tablets (stående) */
-@include respond-to(md) {
+/* @include respond-to(md) {
   .company-name {
     display: inline;
   }
-}
+} */
 
 /* Större skärmar */
-@include respond-to(xl) {
+/* @include respond-to(xl) {
   .search-container {
     display: block;
   }
 }
+ */
