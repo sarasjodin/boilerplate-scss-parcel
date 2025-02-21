@@ -36,3 +36,7 @@
     color: map-get($dark-theme, 'header-text') !important;
   }
 }
+
+.navbar.header li a {
+  padding: 5px 0;
+}
