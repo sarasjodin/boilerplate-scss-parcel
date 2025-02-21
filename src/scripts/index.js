@@ -57,3 +57,14 @@ if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark-mode');
   themeToggle.textContent = '☀️ Light Mode';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var phoneNumber = '+393454171570';
+  var phoneLink = document.getElementById('phone-link');
+
+  // Uppdatera href-attributet till tel-länk
+  phoneLink.setAttribute('href', 'tel:' + phoneNumber);
+
+  // Uppdatera synlig text
+  phoneLink.textContent = '📞 ' + phoneNumber + ' (Italy)';
+});
