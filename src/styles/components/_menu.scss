@@ -11,7 +11,7 @@
 
     a {
       text-decoration: none;
-      color: map-get($colors, 'white');
+      color: map-get($colors, 'primary');
       display: block;
     }
   }
@@ -37,7 +37,21 @@
 
 .footer .menu a {
   text-decoration: none;
-  color: map-get($colors, 'white');
-  padding: 10px 15px;
+  color: map-get($colors, 'primary');
+  padding: 5px 15px;
   display: block;
+}
+
+.dark-mode .footer .menu a {
+  color: map-get($dark-theme, 'primary');
+}
+
+.footer a[href^='mailto:'] {
+  color: map-get($light-theme, 'primary');
+  font-weight: bold;
+}
+
+.dark-mode .footer a[href^='mailto:'] {
+  color: map-get($dark-theme, 'primary');
+  font-weight: bold;
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
-    <title>Hem | Sassy Sheets med scss-syntax</title>
+    <title>Home | Sassy Sheets with scss syntax</title>
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
@@ -13,15 +13,56 @@
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
-          <a href="#" class="logo">
-            <img src="./images/logo-01.svg" alt="Företagslogotyp" />
-            <span class="company-name">Sara</span>
+          <a
+            href="https://it.linkedin.com/in/sjodinscolari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Besök Saras LinkedIn-sida"
+            ><picture>
+              <!-- AVIF-format för bästa komprimering -->
+              <source
+                srcset="
+                  ./images/developer-800x800.avif 800w,
+                  ./images/developer-600x600.avif 600w,
+                  ./images/developer-400x400.avif 400w,
+                  ./images/developer-200x200.avif 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/avif"
+              />
+              <!-- WebP-format som alternativ -->
+              <source
+                srcset="
+                  ./images/developer-800x800.webp 800w,
+                  ./images/developer-600x600.webp 600w,
+                  ./images/developer-400x400.webp 400w,
+                  ./images/developer-200x200.webp 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/webp"
+              />
+              <!-- JPG som fallback för äldre webbläsare -->
+              <img
+                src="./images/developer-400x400.jpg"
+                srcset="
+                  ./images/developer-800x800.jpg 800w,
+                  ./images/developer-600x600.jpg 600w,
+                  ./images/developer-400x400.jpg 400w,
+                  ./images/developer-200x200.jpg 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                alt="Sara, webbutvecklaren bakom denna webbplats"
+                width="100"
+                height="100"
+              />
+            </picture>
+            <span class="company-name">Sassy Sara</span>
           </a>
 
           <!-- Sökfält -->
-          <div class="search-container">
+          <!-- <div class="search-container">
             <input type="text" class="search-input" placeholder="Sök..." />
-          </div>
+          </div> -->
 
           <!-- Hamburgermeny-knapp -->
           <button class="menu-toggle" aria-label="Öppna meny">☰</button>
@@ -29,16 +70,43 @@
           <!-- Navigationsmeny -->
           <nav class="nav">
             <ul class="menu">
-              <li><a href="#">Hem</a></li>
-              <li><a href="./about.html">Om mig</a></li>
-              <li><a href="./process.html">Process</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="./sass.html">Sass</a></li>
+              <li><a href="./process.html">Process</a></li>
               <li class="dropdown">
-                <a href="#">Produkter ▾</a>
+                <a href="#">Portfolio Items ▾</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Produkt 1</a></li>
-                  <li><a href="#">Produkt 2</a></li>
-                  <li><a href="#">Produkt 3</a></li>
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open AI Poem Generator in a new tab"
+                    >
+                      AI Poem Generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Weather App in a new tab"
+                    >
+                      Weather App 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Time Zone Converter in a new tab"
+                    >
+                      Time Zone Converter 🔗
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -47,37 +115,172 @@
         <button id="theme-toggle">🌙 Dark Mode</button>
       </header>
       <main>
-        <section></section>
-        <section></section>
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Welcome to Sassy Sara | A Developer’s Playground</h1>
+            <p>
+              Explore modern web development with
+              <strong>Sass, JavaScript, and Parcel</strong>. This site showcases
+              structured <strong>7-1 pattern methodology</strong>, optimized
+              performance, and accessible design. From
+              <strong>frontend techniques</strong> to
+              <strong>portfolio projects</strong>, you're invited to dive into
+              <strong>clean, scalable, and interactive web solutions</strong>.
+            </p>
+            <div class="cta-buttons">
+              <a
+                href="https://saras-portfolio.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button primary"
+                aria-label="View Sara's portfolio (opens in a new tab)"
+                >View My Portfolio 🔗</a
+              >
+              <a
+                href="mailto:sara@sarasjodin.com"
+                class="button secondary"
+                aria-label="Contact Sara via email"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <h2>What You’ll Find Here</h2>
+          <ul>
+            <li>
+              <strong>✔ A deep dive into Sass & CSS preprocessors</strong><br />
+              Learn how
+              <strong>variables, mixins, and nesting</strong> streamline CSS
+              development.
+            </li>
+            <li>
+              <strong
+                >✔ My structured development process & best practices</strong
+              ><br />
+              Organized file structures, maintainable code, and
+              <strong>efficient styling</strong>.
+            </li>
+            <li>
+              <strong>✔ Dark & Light Mode switch</strong><br />
+              Modern <strong>UI/UX implementation</strong> for an
+              <strong>adaptive user experience</strong>.
+            </li>
+            <li>
+              <strong>✔ Portfolio projects</strong><br />
+              Real-world applications including:
+              <ul class="portfolio-links">
+                <li>
+                  <a
+                    href="https://ai-poems-generator.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="AI Poem Generator (opens in a new tab)"
+                  >
+                    AI Poem Generator 🔗
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://climasense.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Weather App (opens in a new tab)"
+                  >
+                    Weather App 🔗
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://timezonesclocks.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Time Zone Converter (opens in a new tab)"
+                  >
+                    Time Zone Converter 🔗
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >✔ Insights into SEO, performance optimization & UI/UX
+                principles</strong
+              ><br />
+              Creating
+              <strong>fast-loading, accessible, and user-friendly</strong>
+              websites.
+            </li>
+          </ul>
+        </section>
       </main>
+
       <footer class="footer">
         <div class="legal-footer-section">
-          <div class="logo-container">
-            <picture>
-              <!-- Standard SVG-logga -->
-              <source srcset="./images/logo-01.svg" type="image/svg+xml" />
-
-              <!-- Fallback om SVG inte stöds -->
-              <img
-                src="./images/logo-01.png"
-                alt="Färdtjänst Örebro - Till startsidan"
-                width="150"
-                height="110"
-                loading="lazy"
-                class="logo"
-              />
-            </picture>
+          <div>
+            <h2>Sara Sjoedin Scolari</h2>
+            <p>@2025 All rights reserved</p>
           </div>
-          <h2>Färdtjänst Örebro</h2>
-          <p>@2025 Färdtjänst Örebro</p>
-          <p>Alla rättigheter förbehållna</p>
+          <div class="logo-container">
+            <a
+              href="https://it.linkedin.com/in/sjodinscolari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Saras LinkedIn-sida"
+              ><picture>
+                <!-- AVIF-format för bästa komprimering -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.avif 800w,
+                    ./images/developer-600x600.avif 600w,
+                    ./images/developer-400x400.avif 400w,
+                    ./images/developer-200x200.avif 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/avif"
+                />
+                <!-- WebP-format som alternativ -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.webp 800w,
+                    ./images/developer-600x600.webp 600w,
+                    ./images/developer-400x400.webp 400w,
+                    ./images/developer-200x200.webp 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/webp"
+                />
+                <!-- JPG som fallback för äldre webbläsare -->
+                <img
+                  src="./images/developer-400x400.jpg"
+                  srcset="
+                    ./images/developer-800x800.jpg 800w,
+                    ./images/developer-600x600.jpg 600w,
+                    ./images/developer-400x400.jpg 400w,
+                    ./images/developer-200x200.jpg 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  alt="Sara, webbutvecklaren bakom denna webbplats"
+                  width="175"
+                  height="175"
+                /> </picture
+            ></a>
+          </div>
         </div>
         <div class="company-footer-info">
-          <h2>Huvudkontoret</h2>
+          <h2>Places I call home</h2>
           <address>
+            <h3>Italy</h3>
             <ul>
-              <li>Färdtjänstgatan 44</li>
-              <li>70321 Örebro</li>
+              <li>Milano</li>
+              <li>Valpiana, Vercelli, Piemonte</li>
+            </ul>
+            <h3>Sweden</h3>
+            <ul>
+              <li>Stockholm</li>
+              <li>Myckelgensjö, Anundsjö, Västernorrland</li>
+              <li>Örebro</li>
             </ul>
           </address>
 
@@ -85,22 +288,22 @@
           <address>
             <ul>
               <li>
-                <a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a>
+                <a href="mailto:sara@sarasjodin.com">sara@sarasjodin.com</a>
               </li>
             </ul>
           </address>
         </div>
 
         <div class="company-footer-info">
-          <h2>Telefon</h2>
+          <h2>Call me</h2>
           <address>
             <ul>
-              <li>070-132 45 67</li>
+              <li>+39 345 4171 570</li>
             </ul>
           </address>
 
           <div class="social-footer-menu">
-            <h2>Följ oss</h2>
+            <h2>Follow me</h2>
             <ul class="social-icons">
               <!-- Facebook -->
               <li class="social-icon">
@@ -200,7 +403,7 @@
               <li class="social-icon linkedin">
                 <a
                   class="icon linkedin square icon-bw"
-                  href="https://www.linkedin.com"
+                  href="https://it.linkedin.com/in/sjodinscolari"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Besök vår LinkedIn-sida"
@@ -221,26 +424,34 @@
           </div>
         </div>
         <div class="legal-footer-menu">
-          <h2>Våra riktlinjer</h2>
-          <nav aria-label="Juridiska riktlinjer">
-            <ul>
-              <li><a href="#">Integritetspolicy</a></li>
-              <li><a href="#">Cookie policy</a></li>
-              <li><a href="#">Användarvillkor</a></li>
-              <li>
-                <a href="#">Tillgänglighetsutlåtande</a>
-              </li>
+          <h2>My policies</h2>
+          <nav aria-label="Legal Policies">
+            <ul class="menu">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Accessibility Statement</a></li>
             </ul>
           </nav>
         </div>
         <div class="menu-footer">
-          <h2>Navigering</h2>
-          <nav aria-label="Webbplatsnavigering">
-            <ul>
-              <li><a href="#">Hem</a></li>
-              <li><a href="./process.html">Process</a></li>
+          <h2>Navigation</h2>
+          <nav aria-label="Website Navigation">
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="./sass.html">Sass</a></li>
-              <li><a href="./about.html">Om uppgiften</a></li>
+              <li><a href="./process.html">Process</a></li>
+              <li>
+                <a
+                  href="https://saras-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Sara's portfolio website (opens in a new tab)"
+                >
+                  Sara's Portfolio 🔗
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
-    <!-- <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E"
-    /> -->
-    <title>Sass | Sassy Sheets med scss-syntax</title>
+    <title>About Sass | Sassy Sheets with scss syntax</title>
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
@@ -17,15 +13,56 @@
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
-          <a href="./index.html" class="logo">
-            <img src="./images/logo-01.svg" alt="Företagslogotyp" />
+          <a
+            href="https://it.linkedin.com/in/sjodinscolari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Besök Saras LinkedIn-sida"
+            ><picture>
+              <!-- AVIF-format för bästa komprimering -->
+              <source
+                srcset="
+                  ./images/developer-800x800.avif 800w,
+                  ./images/developer-600x600.avif 600w,
+                  ./images/developer-400x400.avif 400w,
+                  ./images/developer-200x200.avif 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/avif"
+              />
+              <!-- WebP-format som alternativ -->
+              <source
+                srcset="
+                  ./images/developer-800x800.webp 800w,
+                  ./images/developer-600x600.webp 600w,
+                  ./images/developer-400x400.webp 400w,
+                  ./images/developer-200x200.webp 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/webp"
+              />
+              <!-- JPG som fallback för äldre webbläsare -->
+              <img
+                src="./images/developer-400x400.jpg"
+                srcset="
+                  ./images/developer-800x800.jpg 800w,
+                  ./images/developer-600x600.jpg 600w,
+                  ./images/developer-400x400.jpg 400w,
+                  ./images/developer-200x200.jpg 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                alt="Sara, webbutvecklaren bakom denna webbplats"
+                width="100"
+                height="100"
+              />
+            </picture>
             <span class="company-name">Sassy Sara</span>
           </a>
 
           <!-- Sökfält -->
-          <div class="search-container">
+          <!--  <div class="search-container">
             <input type="text" class="search-input" placeholder="Sök..." />
-          </div>
+          </div> -->
 
           <!-- Hamburgermeny-knapp -->
           <button class="menu-toggle" aria-label="Öppna meny">☰</button>
@@ -33,16 +70,43 @@
           <!-- Navigationsmeny -->
           <nav class="nav">
             <ul class="menu">
-              <li><a href="./index.html">Hem</a></li>
-              <li><a href="./about.html">Om mig</a></li>
-              <li><a href="./process.html">Process</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="#">Sass</a></li>
+              <li><a href="./process.html">Process</a></li>
               <li class="dropdown">
-                <a href="#">Produkter ▾</a>
+                <a href="#">Portfolio Items ▾</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Produkt 1</a></li>
-                  <li><a href="#">Produkt 2</a></li>
-                  <li><a href="#">Produkt 3</a></li>
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open AI Poem Generator in a new tab"
+                    >
+                      AI Poem Generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Weather App in a new tab"
+                    >
+                      Weather App 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Time Zone Converter in a new tab"
+                    >
+                      Time Zone Converter 🔗
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -51,89 +115,238 @@
         <button id="theme-toggle">🌙 Dark Mode</button>
       </header>
       <main>
+        <h1>More About My "Sassy Website"</h1>
+        <p>
+          This project is part of the Web Development program at Mid Sweden
+          University and involves creating a website using Node.js, NPM, Parcel,
+          and Sass (SCSS).
+        </p>
         <section>
-          <h1>Mer om min "sassy webbplats"</h1>
+          <h2>Purpose of the Assignment</h2>
+          <ul>
+            <li>Understand the purpose of CSS preprocessors.</li>
+            <li>Learn how to use SASS to simplify CSS development.</li>
+            <li>
+              Practically apply the development environment set up in previous
+              modules.
+            </li>
+            <li>
+              Be able to automate the conversion of SASS files using Parcel.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Minimum Requirements</h2>
+          <ul>
+            <li>
+              A simple, fictional website with at least five menu options (not
+              all need to be functional).
+            </li>
+            <li>
+              At least two HTML pages (a homepage and a subpage about Sass).
+            </li>
+            <li>
+              Based on a Parcel boilerplate, but without reusing old CSS files.
+            </li>
+            <li>
+              Use of variables (at least the color scheme should be stored as
+              variables).
+            </li>
+            <li>
+              Color functions (at minimum, `darken` and `lighten` should be
+              used, but more are encouraged).
+            </li>
+            <li>
+              Nesting, Mixins, and Selector Inheritance (using the `@extend`
+              keyword).
+            </li>
+            <li>
+              If/else statements, at least one partial, and a well-structured
+              CSS file organization.
+            </li>
+            <li>
+              Deployment should not use FTP/SFTP hosting but instead platforms
+              such as GitHub Pages, Netlify, Vercel, or Render.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>My Evaluation</h2>
           <p>
-            Uppgiften ingår i Webbutvecklingsprogrammet på Mittuniversitetet och
-            består i att skapa en webbplats med hjälp av Nodejs, Npm, Parcel och
-            Sass (scss).
+            Sass extends the functionality of regular CSS by introducing
+            powerful features that make styling more efficient, maintainable,
+            and scalable. Some key advantages and disadvantages of using Sass
+            include:
           </p>
-          <h2>Syfte med uppgiften</h2>
+
+          <h3>Pros of the CSS Preprocessor Sass</h3>
           <ul>
-            <li>Förstå syftet med CSS-preprocessorer.</li>
-            <li>Kunna använda SASS för att underlätta utveckling med CSS.</li>
             <li>
-              Praktiskt använda utvecklings-miljön du skapade i tidigare moment.
+              <strong>Better Organization</strong><br />Using partials and
+              imports allows for a structured and modular CSS approach.
             </li>
-            <li>Kunna automatisera konvertering av SASS-filer med Parcel.</li>
+            <li>
+              <strong>Variables</strong><br />Define colors, font sizes, and
+              other values in one place and reuse them throughout the styles.
+            </li>
+            <li>
+              <strong>Mixins</strong><br />Write reusable blocks of CSS to avoid
+              code repetition and improve maintainability.
+            </li>
+            <li>
+              <strong>Selector Inheritance (`@extend`)</strong><br />Helps in
+              reducing redundancy by allowing shared styles between elements.
+            </li>
+            <li>
+              <strong>Functions & Nesting</strong><br />Improves readability and
+              makes it easier to write CSS with logical hierarchy.
+            </li>
+            <li>
+              <strong>Math Operations</strong><br />Enables calculations
+              directly in CSS, such as adjusting padding or font sizes
+              dynamically.
+            </li>
+          </ul>
+
+          <h3>Cons of the CSS Preprocessor Sass</h3>
+          <ul>
+            <li>
+              <strong>Learning Curve</strong><br />While Sass simplifies many
+              CSS tasks, beginners may find it overwhelming at first.
+            </li>
+            <li>
+              <strong>Compilation Required</strong><br />Unlike standard CSS,
+              Sass needs to be compiled into regular CSS before it can be used
+              in the browser. Parcel is taking care of that for this website.
+            </li>
+            <li>
+              <strong>Can Encourage Overuse</strong><br />Nesting too deeply can
+              lead to overly specific and difficult-to-maintain styles.
+            </li>
+            <li>
+              <strong>Tooling Dependency</strong><br />Requires Node.js, npm,
+              and build tools like Parcel or Webpack, which adds complexity.
+            </li>
           </ul>
         </section>
         <section>
-          Minimumkrav:
-          <ul>
-            <li>
-              Enkel, fiktiv webbplats med minst 5 menyval (men alla behöver inte
-              vara valbara)
-            </li>
-            <li>Minst två HTML-sidor (en startsida och en undersida Sass)</li>
-            <li>
-              Baserat på en Parcel boilerplate, men inte återanvända gammal css
-            </li>
-            <li>Variabler (minst färgschema ska lagras i variabler)</li>
-            <li>
-              Color functions (darken och lighten ska som minst användas, men
-              använd gärna fler)
-            </li>
-            <li>Nesting Mixins Selector inheritance (nyckelordet "@extend")</li>
-            <li>
-              If/else-satser. Minst en partial Partials med en god filstruktur
-              för CSS-kod
-            </li>
-            <li>
-              Ej FTP/SFTP webbhost men t.ex. Github Pages, Netlify, Vercel eller
-              Render.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Min utvärdering</h2>
-          <h3>För- och nackdelar med CSS-preprocessorn Sass?</h3>
-          <p>Mer text här</p>
-          <h3>
-            Hur var det att komma igång att arbete med en CSS-preprocessor?
-          </h3>
-          <p>Mer text här</p>
+          <h3>How Was It to Get Started Working with a CSS Preprocessor?</h3>
+
+          <article>
+            <h4>The Initial Challenge</h4>
+            <p>
+              Transitioning from regular CSS to Sass was initially overwhelming
+              due to the new syntax and additional setup required. Instead of
+              taking small steps, I decided to dive straight into the
+              <strong>7-1 pattern method</strong>, which is quite complex for
+              someone without much prior Sass experience.
+            </p>
+          </article>
+
+          <article>
+            <h4>The Learning Curve</h4>
+            <p>
+              As I became more comfortable with
+              <strong>variables, mixins, and nesting</strong>, I quickly
+              realized the immense benefits of Sass. The ability to store and
+              reuse values significantly reduced redundancy, and nesting made my
+              stylesheets more structured and readable.
+            </p>
+          </article>
+
+          <article>
+            <h4>Boosting Efficiency with Automation</h4>
+            <p>
+              One of the biggest game-changers was automating the Sass
+              compilation process using <strong>Parcel</strong>. This made it
+              seamless to integrate Sass into my workflow, eliminating the need
+              for manual CSS updates and ensuring that all styles were
+              efficiently processed.
+            </p>
+          </article>
+
+          <article>
+            <h4>The Power of Structured Styling</h4>
+            <p>
+              The fact that multiple stylesheets can be
+              <strong
+                >structured and managed through a single
+                <code>main.scss</code> file</strong
+              >
+              has made my development process much smoother. By organizing my
+              styles into different partials, I can maintain a clean and
+              scalable codebase, making future updates and modifications
+              effortless.
+            </p>
+          </article>
         </section>
       </main>
 
       <footer class="footer">
         <div class="legal-footer-section">
-          <div class="logo-container">
-            <picture>
-              <!-- Standard SVG-logga -->
-              <source srcset="./images/logo-01.svg" type="image/svg+xml" />
-
-              <!-- Fallback om SVG inte stöds -->
-              <img
-                src="./images/logo-01.png"
-                alt="Färdtjänst Örebro - Till startsidan"
-                width="150"
-                height="110"
-                loading="lazy"
-                class="logo"
-              />
-            </picture>
+          <div>
+            <h2>Sara Sjoedin Scolari</h2>
+            <p>@2025 All rights reserved</p>
           </div>
-          <h2>Färdtjänst Örebro</h2>
-          <p>@2025 Färdtjänst Örebro</p>
-          <p>Alla rättigheter förbehållna</p>
+          <div class="logo-container">
+            <a
+              href="https://it.linkedin.com/in/sjodinscolari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Saras LinkedIn-sida"
+              ><picture>
+                <!-- AVIF-format för bästa komprimering -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.avif 800w,
+                    ./images/developer-600x600.avif 600w,
+                    ./images/developer-400x400.avif 400w,
+                    ./images/developer-200x200.avif 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/avif"
+                />
+                <!-- WebP-format som alternativ -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.webp 800w,
+                    ./images/developer-600x600.webp 600w,
+                    ./images/developer-400x400.webp 400w,
+                    ./images/developer-200x200.webp 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/webp"
+                />
+                <!-- JPG som fallback för äldre webbläsare -->
+                <img
+                  src="./images/developer-400x400.jpg"
+                  srcset="
+                    ./images/developer-800x800.jpg 800w,
+                    ./images/developer-600x600.jpg 600w,
+                    ./images/developer-400x400.jpg 400w,
+                    ./images/developer-200x200.jpg 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  alt="Sara, webbutvecklaren bakom denna webbplats"
+                  width="175"
+                  height="175"
+                /> </picture
+            ></a>
+          </div>
         </div>
         <div class="company-footer-info">
-          <h2>Huvudkontoret</h2>
+          <h2>Places I call home</h2>
           <address>
+            <h3>Italy</h3>
             <ul>
-              <li>Färdtjänstgatan 44</li>
-              <li>70321 Örebro</li>
+              <li>Milano</li>
+              <li>Valpiana, Vercelli, Piemonte</li>
+            </ul>
+            <h3>Sweden</h3>
+            <ul>
+              <li>Stockholm</li>
+              <li>Myckelgensjö, Anundsjö, Västernorrland</li>
+              <li>Örebro</li>
             </ul>
           </address>
 
@@ -141,22 +354,22 @@
           <address>
             <ul>
               <li>
-                <a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a>
+                <a href="mailto:sara@sarasjodin.com">sara@sarasjodin.com</a>
               </li>
             </ul>
           </address>
         </div>
 
         <div class="company-footer-info">
-          <h2>Telefon</h2>
+          <h2>Call me</h2>
           <address>
             <ul>
-              <li>070-132 45 67</li>
+              <li>+39 345 4171 570</li>
             </ul>
           </address>
 
           <div class="social-footer-menu">
-            <h2>Följ oss</h2>
+            <h2>Follow me</h2>
             <ul class="social-icons">
               <!-- Facebook -->
               <li class="social-icon">
@@ -256,7 +469,7 @@
               <li class="social-icon linkedin">
                 <a
                   class="icon linkedin square icon-bw"
-                  href="https://www.linkedin.com"
+                  href="https://it.linkedin.com/in/sjodinscolari"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Besök vår LinkedIn-sida"
@@ -277,26 +490,34 @@
           </div>
         </div>
         <div class="legal-footer-menu">
-          <h2>Våra riktlinjer</h2>
-          <nav aria-label="Juridiska riktlinjer">
-            <ul>
-              <li><a href="#">Integritetspolicy</a></li>
-              <li><a href="#">Cookie policy</a></li>
-              <li><a href="#">Användarvillkor</a></li>
-              <li>
-                <a href="#">Tillgänglighetsutlåtande</a>
-              </li>
+          <h2>My policies</h2>
+          <nav aria-label="Legal Policies">
+            <ul class="menu">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Accessibility Statement</a></li>
             </ul>
           </nav>
         </div>
         <div class="menu-footer">
-          <h2>Navigering</h2>
-          <nav aria-label="Webbplatsnavigering">
-            <ul>
-              <li><a href="./index.html">Hem</a></li>
-              <li><a href="./process.html">Process</a></li>
+          <h2>Navigation</h2>
+          <nav aria-label="Website Navigation">
+            <ul class="menu">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="#">Sass</a></li>
-              <li><a href="./about.html">Om uppgiften</a></li>
+              <li><a href="./process.html">Process</a></li>
+              <li>
+                <a
+                  href="https://saras-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Sara's portfolio website (opens in a new tab)"
+                >
+                  Sara's Portfolio 🔗
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

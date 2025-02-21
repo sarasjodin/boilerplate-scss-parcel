@@ -1,87 +1,237 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
-    <title>Om uppgiften | Sassy Sheets med scss-syntax</title>
+    <title>About the assignment | Sassy Sheets with scss syntax</title>
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
       <header class="navbar header">
         <div class="container">
-          <div class="branding">
-            <!-- Logo och företagsnamn -->
-            <a href="./index.html" class="logo">
-              <img src="./images/logo-01.svg" alt="Företagslogotyp" />
-              <span class="company-name">Sara</span>
-            </a>
+          <!-- Logo och företagsnamn -->
+          <a
+            href="https://it.linkedin.com/in/sjodinscolari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Besök Saras LinkedIn-sida"
+            ><picture>
+              <!-- AVIF-format för bästa komprimering -->
+              <source
+                srcset="
+                  ./images/developer-800x800.avif 800w,
+                  ./images/developer-600x600.avif 600w,
+                  ./images/developer-400x400.avif 400w,
+                  ./images/developer-200x200.avif 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/avif"
+              />
+              <!-- WebP-format som alternativ -->
+              <source
+                srcset="
+                  ./images/developer-800x800.webp 800w,
+                  ./images/developer-600x600.webp 600w,
+                  ./images/developer-400x400.webp 400w,
+                  ./images/developer-200x200.webp 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/webp"
+              />
+              <!-- JPG som fallback för äldre webbläsare -->
+              <img
+                src="./images/developer-400x400.jpg"
+                srcset="
+                  ./images/developer-800x800.jpg 800w,
+                  ./images/developer-600x600.jpg 600w,
+                  ./images/developer-400x400.jpg 400w,
+                  ./images/developer-200x200.jpg 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                alt="Sara, webbutvecklaren bakom denna webbplats"
+                width="100"
+                height="100"
+              />
+            </picture>
+            <span class="company-name">Sassy Sara</span>
+          </a>
 
-            <!-- Sökfält -->
-            <div class="search-container">
-              <input type="text" class="search-input" placeholder="Sök..." />
-            </div>
-          </div>
+          <!-- Sökfält -->
+          <!-- <div class="search-container">
+            <input type="text" class="search-input" placeholder="Sök..." />
+          </div> -->
 
           <!-- Hamburgermeny-knapp -->
           <button class="menu-toggle" aria-label="Öppna meny">☰</button>
 
           <!-- Navigationsmeny -->
-          <div class="nav-wrapper">
-            <nav class="nav">
-              <ul class="menu">
-                <li><a href="./index.html">Hem</a></li>
-                <li><a href="#">Om mig</a></li>
-                <li><a href="./process.html">Process</a></li>
-                <li><a href="./sass.html">Sass</a></li>
-                <li class="dropdown">
-                  <a href="#">Produkter ▾</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Produkt 1</a></li>
-                    <li><a href="#">Produkt 2</a></li>
-                    <li><a href="#">Produkt 3</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <nav class="nav">
+            <ul class="menu">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="./sass.html">Sass</a></li>
+              <li><a href="./process.html">Process</a></li>
+              <li class="dropdown">
+                <a href="#">Portfolio Items ▾</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open AI Poem Generator in a new tab"
+                    >
+                      AI Poem Generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Weather App in a new tab"
+                    >
+                      Weather App 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Time Zone Converter in a new tab"
+                    >
+                      Time Zone Converter 🔗
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
         <button id="theme-toggle">🌙 Dark Mode</button>
       </header>
       <main>
-        <section></section>
-        <section></section>
+        <h1>About Me</h1>
+        <section>
+          <h2>Hi! My name is Sara Sjödin Scolari</h2>
+          <p>
+            I am a passionate web developer specializing in frontend and modern
+            web solutions. With experience in HTML, CSS, JavaScript, SCSS, and
+            modern build tools like Parcel, I create fast, responsive, and
+            visually appealing websites.
+          </p>
+        </section>
+        <section>
+          <h2>Why Choose Me?</h2>
+          <ul>
+            <li>
+              <strong>✔ Pixel-perfect design</strong><br />I transform ideas
+              into sleek, responsive websites.
+            </li>
+            <li>
+              <strong>✔ Performance and SEO optimization</strong><br />Fast
+              loading times and search engine-friendly structures.
+            </li>
+            <li>
+              <strong>✔ Dark Mode and Light Mode</strong><br />Modern and
+              user-friendly design for all devices.
+            </li>
+            <li>
+              <strong>✔ SASS and CSS preprocessors</strong><br />Efficient code
+              structure and scalable solutions.
+            </li>
+            <li>
+              <strong>✔ Animations and UI effects</strong><br />Creating an
+              engaging experience with smooth effects.
+            </li>
+            <li>
+              <strong>✔ User-centered approach</strong><br />Websites that are
+              accessible, responsive, and user-friendly.
+            </li>
+          </ul>
+          <p>Let's create something amazing together!</p>
+          <p>[Contact me here]</p>
+        </section>
+        <section>
+          <h2>About this website</h2>
+          <p>
+            This website is part of my web development studies, where I explore
+            the power of modern tools like Sass, Parcel, and CSS preprocessors.
+            The goal is to build a structured, scalable, and responsive website
+            while implementing best practices in frontend development.
+          </p>
+        </section>
       </main>
+
       <footer class="footer">
         <div class="legal-footer-section">
-          <div class="logo-container">
-            <picture>
-              <!-- Standard SVG-logga -->
-              <source srcset="./images/logo-01.svg" type="image/svg+xml" />
-
-              <!-- Fallback om SVG inte stöds -->
-              <img
-                src="./images/logo-01.png"
-                alt="Färdtjänst Örebro - Till startsidan"
-                width="150"
-                height="110"
-                loading="lazy"
-                class="logo"
-              />
-            </picture>
+          <div>
+            <h2>Sara Sjoedin Scolari</h2>
+            <p>@2025 All rights reserved</p>
           </div>
-          <h2>Färdtjänst Örebro</h2>
-          <p>@2025 Färdtjänst Örebro</p>
-          <p>Alla rättigheter förbehållna</p>
+          <div class="logo-container">
+            <a
+              href="https://it.linkedin.com/in/sjodinscolari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Saras LinkedIn-sida"
+              ><picture>
+                <!-- AVIF-format för bästa komprimering -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.avif 800w,
+                    ./images/developer-600x600.avif 600w,
+                    ./images/developer-400x400.avif 400w,
+                    ./images/developer-200x200.avif 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/avif"
+                />
+                <!-- WebP-format som alternativ -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.webp 800w,
+                    ./images/developer-600x600.webp 600w,
+                    ./images/developer-400x400.webp 400w,
+                    ./images/developer-200x200.webp 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/webp"
+                />
+                <!-- JPG som fallback för äldre webbläsare -->
+                <img
+                  src="./images/developer-400x400.jpg"
+                  srcset="
+                    ./images/developer-800x800.jpg 800w,
+                    ./images/developer-600x600.jpg 600w,
+                    ./images/developer-400x400.jpg 400w,
+                    ./images/developer-200x200.jpg 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  alt="Sara, webbutvecklaren bakom denna webbplats"
+                  width="175"
+                  height="175"
+                /> </picture
+            ></a>
+          </div>
         </div>
         <div class="company-footer-info">
-          <h2>Huvudkontoret</h2>
+          <h2>Places I call home</h2>
           <address>
+            <h3>Italy</h3>
             <ul>
-              <li>Färdtjänstgatan 44</li>
-              <li>70321 Örebro</li>
+              <li>Milano</li>
+              <li>Valpiana, Vercelli, Piemonte</li>
+            </ul>
+            <h3>Sweden</h3>
+            <ul>
+              <li>Stockholm</li>
+              <li>Myckelgensjö, Anundsjö, Västernorrland</li>
+              <li>Örebro</li>
             </ul>
           </address>
 
@@ -89,22 +239,22 @@
           <address>
             <ul>
               <li>
-                <a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a>
+                <a href="mailto:sara@sarasjodin.com">sara@sarasjodin.com</a>
               </li>
             </ul>
           </address>
         </div>
 
         <div class="company-footer-info">
-          <h2>Telefon</h2>
+          <h2>Call me</h2>
           <address>
-            <ul class="menu">
-              <li>070-132 45 67</li>
+            <ul>
+              <li>+39 345 4171 570</li>
             </ul>
           </address>
 
           <div class="social-footer-menu">
-            <h2>Följ oss</h2>
+            <h2>Follow me</h2>
             <ul class="social-icons">
               <!-- Facebook -->
               <li class="social-icon">
@@ -204,7 +354,7 @@
               <li class="social-icon linkedin">
                 <a
                   class="icon linkedin square icon-bw"
-                  href="https://www.linkedin.com"
+                  href="https://it.linkedin.com/in/sjodinscolari"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Besök vår LinkedIn-sida"
@@ -225,26 +375,34 @@
           </div>
         </div>
         <div class="legal-footer-menu">
-          <h2>Våra riktlinjer</h2>
-          <nav aria-label="Juridiska riktlinjer">
+          <h2>My policies</h2>
+          <nav aria-label="Legal Policies">
             <ul class="menu">
-              <li><a href="#">Integritetspolicy</a></li>
-              <li><a href="#">Cookie policy</a></li>
-              <li><a href="#">Användarvillkor</a></li>
-              <li>
-                <a href="#">Tillgänglighetsutlåtande</a>
-              </li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Accessibility Statement</a></li>
             </ul>
           </nav>
         </div>
         <div class="menu-footer">
-          <h2>Navigering</h2>
-          <nav aria-label="Webbplatsnavigering">
+          <h2>Navigation</h2>
+          <nav aria-label="Website Navigation">
             <ul class="menu">
-              <li><a href="./index.html">Hem</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="#">Sass</a></li>
               <li><a href="./process.html">Process</a></li>
-              <li><a href="./sass.html">Sass</a></li>
-              <li><a href="#">Om uppgiften</a></li>
+              <li>
+                <a
+                  href="https://saras-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Sara's portfolio website (opens in a new tab)"
+                >
+                  Sara's Portfolio 🔗
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
-    <title>Process | Sassy Sheets med scss-syntax</title>
+    <title>Process | Sassy Sheets with scss syntax</title>
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
@@ -13,15 +13,56 @@
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
-          <a href="./index.html" class="logo">
-            <img src="./images/logo-01.svg" alt="Företagslogotyp" />
-            <span class="company-name">Sara</span>
+          <a
+            href="https://it.linkedin.com/in/sjodinscolari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Besök Saras LinkedIn-sida"
+            ><picture>
+              <!-- AVIF-format för bästa komprimering -->
+              <source
+                srcset="
+                  ./images/developer-800x800.avif 800w,
+                  ./images/developer-600x600.avif 600w,
+                  ./images/developer-400x400.avif 400w,
+                  ./images/developer-200x200.avif 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/avif"
+              />
+              <!-- WebP-format som alternativ -->
+              <source
+                srcset="
+                  ./images/developer-800x800.webp 800w,
+                  ./images/developer-600x600.webp 600w,
+                  ./images/developer-400x400.webp 400w,
+                  ./images/developer-200x200.webp 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                type="image/webp"
+              />
+              <!-- JPG som fallback för äldre webbläsare -->
+              <img
+                src="./images/developer-400x400.jpg"
+                srcset="
+                  ./images/developer-800x800.jpg 800w,
+                  ./images/developer-600x600.jpg 600w,
+                  ./images/developer-400x400.jpg 400w,
+                  ./images/developer-200x200.jpg 200w
+                "
+                sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                alt="Sara, webbutvecklaren bakom denna webbplats"
+                width="100"
+                height="100"
+              />
+            </picture>
+            <span class="company-name">Sassy Sara</span>
           </a>
 
           <!-- Sökfält -->
-          <div class="search-container">
+          <!--  <div class="search-container">
             <input type="text" class="search-input" placeholder="Sök..." />
-          </div>
+          </div> -->
 
           <!-- Hamburgermeny-knapp -->
           <button class="menu-toggle" aria-label="Öppna meny">☰</button>
@@ -29,16 +70,43 @@
           <!-- Navigationsmeny -->
           <nav class="nav">
             <ul class="menu">
-              <li><a href="./index.html">Hem</a></li>
-              <li><a href="./about.html">Om mig</a></li>
-              <li><a href="#">Process</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="./sass.html">Sass</a></li>
+              <li><a href="#">Process</a></li>
               <li class="dropdown">
-                <a href="#">Produkter ▾</a>
+                <a href="#">Portfolio Items ▾</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Produkt 1</a></li>
-                  <li><a href="#">Produkt 2</a></li>
-                  <li><a href="#">Produkt 3</a></li>
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open AI Poem Generator in a new tab"
+                    >
+                      AI Poem Generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Weather App in a new tab"
+                    >
+                      Weather App 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Time Zone Converter in a new tab"
+                    >
+                      Time Zone Converter 🔗
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -47,11 +115,11 @@
         <button id="theme-toggle">🌙 Dark Mode</button>
       </header>
       <main>
+        <h1>
+          -From Idea to Deployment: Building a Website with Sass 7-1 method and
+          Parcel automation
+        </h1>
         <section>
-          <h1>
-            From Idea to Deployment: Building a Website with Sass, Parcel &
-            Bootstrap
-          </h1>
           <h2>Key Learnings</h2>
           <h2>My Development Process</h2>
           <ol>
@@ -60,17 +128,18 @@
               Created the 7-1 patters for Sass and its main.scss file with @use
             </li>
             <li>Installed Sass <code>npm install sass -D</code></li>
-            <li>Created a Bootstrap menu for large screens</li>
-            <li>Created a Bootstrap Offcanvas responsive menu</li>
+            <li>
+              Experimented with a Bootstrap menu for large screens Bootstrap
+              Offcanvas responsive menu
+            </li>
             <li>
               Realized that I was alreay developing and had to start commiting
               to GitHub...
             </li>
             <li>Created the GitHub repository!</li>
             <li>
-              I decided to use Render for the first time. Previously I've only
-              tried Netlify and GitHub Pages for CI/CD deployment. The first
-              commit of the site is up and running.
+              I decided to use Render for this site. But I+m also used to
+              Netlify and GitHub Pages for CI/CD deployment.
               <a
                 href="https://boilerplate-scss-parcel.onrender.com/"
                 target="_blank"
@@ -78,46 +147,62 @@
                 >My scss parcel boilerplate</a
               >
             </li>
+            <li>
+              Decided to create a pure scss site, to avoid Bootstrap dependancy
+              problems for my first scss-site.
+            </li>
           </ol>
-          /styles<br />
-          ├── <strong>abstracts/</strong> # Variabler, mixins, functions (ALDRIG
-          output i CSS)<br />
-          │ ├── _variables.scss<br />
-          │ ├── _mixins.scss<br />
-          │ ├── _functions.scss<br />
-          │ ├── <strong>base/</strong> # Grundläggande stilar (reset, typografi,
-          global styling)<br />
-          │ ├── _reset.scss<br />
-          │ ├── _typography.scss<br />
-          │ ├── _global.scss<br />
-          │ ├── <strong>layout/</strong> # Stora strukturer (grid, header,
-          footer, navigation)<br />
-          │ ├── _header.scss<br />
-          │ ├── _footer.scss<br />
-          │ ├── _grid.scss<br />
-          │ ├── _sidebar.scss<br />
-          │ ├── <strong>components/</strong> # Återanvändbara UI-element
-          (knappar, kort, modaler)<br />
-          │ ├── _buttons.scss<br />
-          │ ├── _cards.scss<br />
-          │ ├── _forms.scss<br />
-          │ ├── _modlas.scss<br />
-          │ ├── _offcanvas.scss<br />
-          │ ├── <strong>pages/</strong> # Sid-specifik styling (ex. home.scss,
-          about.scss)<br />
-          │ ├── _about.scss<br />
-          │ ├── _home.scss<br />
-          │ ├── _process.scss<br />
-          │ ├── _sass.scss<br />
-          │ ├── <strong>themes/</strong> # Olika teman (mörkt läge,
-          färgscheman)<br />
-          │ ├── _dark.scss<br />
-          │ ├── _light.scss<br />
-          │ ├── <strong>vendors/</strong> # Externa bibliotek (Bootstrap,
-          Normalize.css)<br />
-          │ ├── _bootstrap.scss<br />
-          │ ├── _normalize.scss<br />
-          │ ├── <strong>main.scss</strong> # Huvudfilen som importerar allt<br />
+        </section>
+        <section>
+          <h2>For this web site I have implemented</h2>
+          <ul>
+            <li>
+              social icons with shape, size and... variables including if
+              statement
+            </li>
+            <li>light and dark theme with theme button</li>
+            <li>Responsive header with a hamburger menu for mobiles</li>
+            <li>Breakpoint variables for media queries</li>
+          </ul>
+        </section>
+        <section>
+          <h2>File structure</h2>
+          <pre>
+            <code>
+          📂styles
+          ├── 📂<strong>abstracts/</strong> # Variabler, mixins, functions (ALDRIG output i CSS)
+          │   ├──📄 _variables.scss
+          │   ├──📄_mixins.scss
+          │   └──📄 _functions.scss
+          ├── 📂<strong>base/</strong> # Grundläggande stilar (reset, typografi, global styling)
+          │   ├──📄 _reset.scss
+          │   ├──📄 _typography.scss
+          │   └──📄 _global.scss
+          ├── 📂<strong>layout/</strong> # Stora strukturer (grid, header, footer, navigation)
+          │   ├──📄 _header.scss
+          │   ├──📄 _footer.scss
+          │   ├──📄 _grid.scss
+          │   └──📄 _sidebar.scss
+          ├── 📂<strong>components/</strong> # Återanvändbara UI-element (knappar, kort, modaler)
+          │   ├──📄 _buttons.scss
+          │   ├──📄 _cards.scss
+          │   ├──📄 _forms.scss
+          │   ├──📄 _modlas.scss
+          │   └──📄 _offcanvas.scss
+          ├── 📂<strong>pages/</strong> # Sid-specifik styling (ex. home.scss, about.scss)
+          │   ├──📄 _about.scss
+          │   ├──📄 _home.scss
+          │   ├──📄 _process.scss
+          │   └──📄 _sass.scss
+          ├── 📂<strong>themes/</strong> # Olika teman (mörkt läge, färgscheman)
+          │   ├──📄 _dark.scss
+          │   └──📄 _light.scss
+          └── 📂<strong>vendors/</strong> # Externa bibliotek (Bootstrap, Normalize.css)
+          │   ├──📄 _bootstrap.scss
+          │   ├──📄 _normalize.scss
+          📄 <strong>main.scss</strong> # Huvudfilen som importerar allt
+            </code>
+          </pre>
         </section>
 
         <section></section>
@@ -125,32 +210,69 @@
 
       <footer class="footer">
         <div class="legal-footer-section">
-          <div class="logo-container">
-            <picture>
-              <!-- Standard SVG-logga -->
-              <source srcset="./images/logo-01.svg" type="image/svg+xml" />
-
-              <!-- Fallback om SVG inte stöds -->
-              <img
-                src="./images/logo-01.png"
-                alt="Färdtjänst Örebro - Till startsidan"
-                width="150"
-                height="110"
-                loading="lazy"
-                class="logo"
-              />
-            </picture>
+          <div>
+            <h2>Sara Sjoedin Scolari</h2>
+            <p>@2025 All rights reserved</p>
           </div>
-          <h2>Färdtjänst Örebro</h2>
-          <p>@2025 Färdtjänst Örebro</p>
-          <p>Alla rättigheter förbehållna</p>
+          <div class="logo-container">
+            <a
+              href="https://it.linkedin.com/in/sjodinscolari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Saras LinkedIn-sida"
+              ><picture>
+                <!-- AVIF-format för bästa komprimering -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.avif 800w,
+                    ./images/developer-600x600.avif 600w,
+                    ./images/developer-400x400.avif 400w,
+                    ./images/developer-200x200.avif 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/avif"
+                />
+                <!-- WebP-format som alternativ -->
+                <source
+                  srcset="
+                    ./images/developer-800x800.webp 800w,
+                    ./images/developer-600x600.webp 600w,
+                    ./images/developer-400x400.webp 400w,
+                    ./images/developer-200x200.webp 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  type="image/webp"
+                />
+                <!-- JPG som fallback för äldre webbläsare -->
+                <img
+                  src="./images/developer-400x400.jpg"
+                  srcset="
+                    ./images/developer-800x800.jpg 800w,
+                    ./images/developer-600x600.jpg 600w,
+                    ./images/developer-400x400.jpg 400w,
+                    ./images/developer-200x200.jpg 200w
+                  "
+                  sizes="(min-width: 1200px) 800px, (min-width: 768px) 600px, (min-width: 480px) 400px, 200px"
+                  alt="Sara, webbutvecklaren bakom denna webbplats"
+                  width="175"
+                  height="175"
+                /> </picture
+            ></a>
+          </div>
         </div>
         <div class="company-footer-info">
-          <h2>Huvudkontoret</h2>
+          <h2>Places I call home</h2>
           <address>
+            <h3>Italy</h3>
             <ul>
-              <li>Färdtjänstgatan 44</li>
-              <li>70321 Örebro</li>
+              <li>Milano</li>
+              <li>Valpiana, Vercelli, Piemonte</li>
+            </ul>
+            <h3>Sweden</h3>
+            <ul>
+              <li>Stockholm</li>
+              <li>Myckelgensjö, Anundsjö, Västernorrland</li>
+              <li>Örebro</li>
             </ul>
           </address>
 
@@ -158,22 +280,22 @@
           <address>
             <ul>
               <li>
-                <a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a>
+                <a href="mailto:sara@sarasjodin.com">sara@sarasjodin.com</a>
               </li>
             </ul>
           </address>
         </div>
 
         <div class="company-footer-info">
-          <h2>Telefon</h2>
+          <h2>Call me</h2>
           <address>
             <ul>
-              <li>070-132 45 67</li>
+              <li>+39 345 4171 570</li>
             </ul>
           </address>
 
           <div class="social-footer-menu">
-            <h2>Följ oss</h2>
+            <h2>Follow me</h2>
             <ul class="social-icons">
               <!-- Facebook -->
               <li class="social-icon">
@@ -273,7 +395,7 @@
               <li class="social-icon linkedin">
                 <a
                   class="icon linkedin square icon-bw"
-                  href="https://www.linkedin.com"
+                  href="https://it.linkedin.com/in/sjodinscolari"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Besök vår LinkedIn-sida"
@@ -294,26 +416,34 @@
           </div>
         </div>
         <div class="legal-footer-menu">
-          <h2>Våra riktlinjer</h2>
-          <nav aria-label="Juridiska riktlinjer">
-            <ul>
-              <li><a href="#">Integritetspolicy</a></li>
-              <li><a href="#">Cookie policy</a></li>
-              <li><a href="#">Användarvillkor</a></li>
-              <li>
-                <a href="#">Tillgänglighetsutlåtande</a>
-              </li>
+          <h2>My policies</h2>
+          <nav aria-label="Legal Policies">
+            <ul class="menu">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Accessibility Statement</a></li>
             </ul>
           </nav>
         </div>
         <div class="menu-footer">
-          <h2>Navigering</h2>
-          <nav aria-label="Webbplatsnavigering">
-            <ul>
-              <li><a href="./index.html">Hem</a></li>
-              <li><a href="#">Process</a></li>
+          <h2>Navigation</h2>
+          <nav aria-label="Website Navigation">
+            <ul class="menu">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li><a href="./sass.html">Sass</a></li>
-              <li><a href="./about.html">Om uppgiften</a></li>
+              <li><a href="#">Process</a></li>
+              <li>
+                <a
+                  href="https://saras-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Sara's portfolio website (opens in a new tab)"
+                >
+                  Sara's Portfolio 🔗
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
