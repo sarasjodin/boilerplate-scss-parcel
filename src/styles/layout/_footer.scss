@@ -3,7 +3,7 @@
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background: map-get($light-theme, 'footer-bg');
   color: map-get($light-theme, 'footer-text');
   transition: $default-transition;
@@ -29,6 +29,10 @@
 
   ul {
     list-style: none;
+
+    li {
+      padding: 5px 0;
+    }
   }
 }
 
@@ -47,4 +51,20 @@
   a {
     color: map-get($dark-theme, 'footer-text');
   }
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+address {
+  font-style: normal !important;
 }

@@ -13,7 +13,6 @@
       text-decoration: none;
       color: map-get($colors, 'primary');
       display: block;
-      padding: 5px;
     }
   }
   // Stil för dropdown
@@ -47,7 +46,6 @@
 .footer .menu a {
   text-decoration: none;
   color: map-get($colors, 'primary');
-  padding: 5px 15px;
   display: block;
 }
 
