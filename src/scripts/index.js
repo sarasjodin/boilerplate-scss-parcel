@@ -36,6 +36,7 @@ const body = document.body;
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
+  body.offsetHeight; // Tvingar ommålning
 
   // Uppdatera knappens text
   if (body.classList.contains('dark-mode')) {

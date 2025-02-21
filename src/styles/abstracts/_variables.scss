@@ -38,6 +38,26 @@ $breakpoints: (
   'xxl': 1600px // Maxbredd – större skärmar centreras
 );
 
+$light-theme: (
+  'bg': #f9fafb,
+  // Bakgrundsfärg
+  'text': #1f2937,
+  // Standardtext
+  'primary': #1f6fc7,
+  // Primärfärg (t.ex. knappar, länkar)
+  'secondary': #26fadc,
+  // Sekundärfärg (t.ex. highlights)
+  'accent': #f59e0b,
+  // Accentfärg (t.ex. hover-effekter, CTA)
+  'error': #dc2626,
+  // Felmeddelanden
+  // Header & Footer
+  'header-bg': #f3f4f6,
+  'header-text': #1f2937,
+  'footer-bg': #e5e7eb,
+  'footer-text': #1f2937
+);
+
 // Teman
 $dark-theme: (
   'bg': #121212,
@@ -50,21 +70,13 @@ $dark-theme: (
   // Sekundärfärg (t.ex. highlights)
   'accent': #e467e7,
   // Accentfärg (t.ex. hover-effekter, CTA)
-  'error': #ed8b8b // Felmeddelanden
-);
-
-$light-theme: (
-  'bg': #f9fafb,
-  // Bakgrundsfärg
-  'text': #1f2937,
-  // Standardtext
-  'primary': #1f6fc7,
-  // Primärfärg (t.ex. knappar, länkar)
-  'secondary': #26fadc,
-  // Sekundärfärg (t.ex. highlights)
-  'accent': #f59e0b,
-  // Accentfärg (t.ex. hover-effekter, CTA)
-  'error': #dc2626 // Felmeddelanden
+  'error': #ed8b8b,
+  // Felmeddelanden
+  // Header & Footer
+  'header-bg': #1f2937,
+  'header-text': #e5e7eb,
+  'footer-bg': #111827,
+  'footer-text': #e5e7eb
 );
 
 // Standard transitions

@@ -1,8 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .footer {
   display: flex;
   justify-content: center;
-  background-color: #222;
+  background: map-get($light-theme, 'footer-bg');
+  color: map-get($light-theme, 'footer-text');
+  transition: $default-transition;
   padding: 20px;
+  text-align: center;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get($light-theme, 'footer-text');
+  }
 
   .social-icons {
     display: flex;
@@ -12,4 +30,21 @@
 
 li.social-icon:nth-child(5) img {
   transform: translate(1.8px, -0.8px);
+}
+
+// Mörkt tema
+.dark-mode .footer {
+  background: map-get($dark-theme, 'footer-bg');
+  color: map-get($dark-theme, 'footer-text');
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get($dark-theme, 'footer-text');
+  }
 }

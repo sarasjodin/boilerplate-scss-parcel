@@ -1,15 +1,38 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.header {
+.navbar.header {
   height: $header-height;
-  background: map-get($light-theme, 'bg');
-  color: map-get($light-theme, 'text');
+  background-color: map-get($light-theme, 'header-bg');
+  color: map-get($light-theme, 'header-text');
+  transition: $default-transition;
   @include flex-center;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get($light-theme, 'header-text') !important;
+  }
 }
 
 // Mörkt tema
-.dark-mode .header {
-  background: map-get($dark-theme, 'bg');
-  color: map-get($dark-theme, 'text');
+.dark-mode .navbar.header {
+  background-color: map-get($dark-theme, 'header-bg');
+  color: map-get($dark-theme, 'header-text');
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get($dark-theme, 'header-text') !important;
+  }
 }
