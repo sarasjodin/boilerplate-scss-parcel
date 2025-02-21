@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.scss" />
     <title>Process | Sassy Sheets with scss syntax</title>
+    <!-- Google Fonts (Preloaded for better performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
@@ -171,38 +179,32 @@
           <h2>File structure</h2>
           <pre>
             <code>
-          📂styles
-          ├── 📂<strong>abstracts/</strong> # Variabler, mixins, functions (ALDRIG output i CSS)
-          │   ├──📄 _variables.scss
-          │   ├──📄_mixins.scss
-          │   └──📄 _functions.scss
-          ├── 📂<strong>base/</strong> # Grundläggande stilar (reset, typografi, global styling)
-          │   ├──📄 _reset.scss
-          │   ├──📄 _typography.scss
-          │   └──📄 _global.scss
-          ├── 📂<strong>layout/</strong> # Stora strukturer (grid, header, footer, navigation)
-          │   ├──📄 _header.scss
-          │   ├──📄 _footer.scss
-          │   ├──📄 _grid.scss
-          │   └──📄 _sidebar.scss
-          ├── 📂<strong>components/</strong> # Återanvändbara UI-element (knappar, kort, modaler)
-          │   ├──📄 _buttons.scss
-          │   ├──📄 _cards.scss
-          │   ├──📄 _forms.scss
-          │   ├──📄 _modlas.scss
-          │   └──📄 _offcanvas.scss
-          ├── 📂<strong>pages/</strong> # Sid-specifik styling (ex. home.scss, about.scss)
-          │   ├──📄 _about.scss
-          │   ├──📄 _home.scss
-          │   ├──📄 _process.scss
-          │   └──📄 _sass.scss
-          ├── 📂<strong>themes/</strong> # Olika teman (mörkt läge, färgscheman)
-          │   ├──📄 _dark.scss
-          │   └──📄 _light.scss
-          └── 📂<strong>vendors/</strong> # Externa bibliotek (Bootstrap, Normalize.css)
-          │   ├──📄 _bootstrap.scss
-          │   ├──📄 _normalize.scss
-          📄 <strong>main.scss</strong> # Huvudfilen som importerar allt
+              📂 styles
+              ├── 📂 abstracts/          # Variables, mixins, functions (No direct CSS output)
+              │   ├──📄 _variables.scss    # Fonts, colors, spacing
+              │   ├──📄 _mixins.scss       # Reusable mixins
+              │   └──📄 _functions.scss    # Sass functions (if needed)
+              ├── 📂 base/               # Base styles
+              │   ├──📄 _reset.scss        # CSS reset or Normalize.css
+              │   ├──📄 _typography.scss   # Global typography styles
+              │   └──📄 _global.scss       # Global styles and layout
+              ├── 📂 layout/             # Large layout components
+              │   ├──📄 _header.scss       # Header styling
+              │   ├──📄 _footer.scss       # Footer styling
+              │   └──📄 _main.scss         # Main content area styling
+              ├── 📂 components/         # UI Components
+              │   ├──📄 _buttons.scss      # Buttons & CTA styles
+              │   ├──📄 _cards.scss        # Card components
+              │   └──📄 _sections.scss     # Section styling
+              ├── 📂 pages/              # Page-specific styles
+              │   ├──📄 _home.scss         # Home page styling
+              │   ├──📄 _about.scss        # About page styling
+              │   ├──📄 _sass.scss         # Sass page styling
+              │   └──📄 _process.scss      # Process page styling
+              ├── 📂 themes/             # Dark/Light theme styles
+              │   ├──📄 _dark.scss         # Dark mode styles
+              │   └──📄 _light.scss        # Light mode styles
+              └📄 main.scss               # Main SCSS file importing everything
             </code>
           </pre>
         </section>

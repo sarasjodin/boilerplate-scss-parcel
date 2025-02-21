@@ -10,4 +10,9 @@ body {
   background-color: map-get($dark-theme, 'bg');
   color: map-get($dark-theme, 'text');
   transition: $default-transition;
+
+  .hero {
+    background-color: map-get($dark-theme, 'bg');
+    color: map-get($dark-theme, 'text');
+  }
 }

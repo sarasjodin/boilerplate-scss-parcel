@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: map-get($colors, 'gray-100');
+  padding: 80px 20px;
+  border-radius: 10px;
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    margin-top: 20px;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+}
+
+.features {
+  background: map-get($colors, 'white');
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.dark-mode {
+  background-color: map-get($dark-theme, 'bg');
+  color: map-get($dark-theme, 'text');
+  transition: $default-transition;
+
+  .features {
+    background-color: map-get($dark-theme, 'header-bg');
+    color: map-get($dark-theme, 'header-text');
+  }
+}
