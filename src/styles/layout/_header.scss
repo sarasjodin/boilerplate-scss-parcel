@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .navbar.header {
-  height: $header-height;
+  height: map-get($sizes, 'header-height');
   background-color: map-get($light-theme, 'header-bg');
   color: map-get($light-theme, 'header-text');
   transition: $default-transition;
