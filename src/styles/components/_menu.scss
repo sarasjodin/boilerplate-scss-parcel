@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  li {
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: map-get($colors, 'white');
+      display: block;
+    }
+  }
+  // Stil för dropdown
+  .dropdown {
+    position: relative;
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: map-get($colors, 'gray-100'); // Bakgrundsfärg
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      min-width: 150px; // Justera bredden
+    }
+
+    &:hover .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.footer .menu a {
+  text-decoration: none;
+  color: map-get($colors, 'white');
+  padding: 10px 15px;
+  display: block;
+}

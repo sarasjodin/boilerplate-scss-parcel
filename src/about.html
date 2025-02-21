@@ -12,37 +12,41 @@
     <div class="container">
       <header class="navbar header">
         <div class="container">
-          <!-- Logo och företagsnamn -->
-          <a href="./index.html" class="logo">
-            <img src="./images/logo-01.svg" alt="Företagslogotyp" />
-            <span class="company-name">Sara</span>
-          </a>
+          <div class="branding">
+            <!-- Logo och företagsnamn -->
+            <a href="./index.html" class="logo">
+              <img src="./images/logo-01.svg" alt="Företagslogotyp" />
+              <span class="company-name">Sara</span>
+            </a>
 
-          <!-- Sökfält -->
-          <div class="search-container">
-            <input type="text" class="search-input" placeholder="Sök..." />
+            <!-- Sökfält -->
+            <div class="search-container">
+              <input type="text" class="search-input" placeholder="Sök..." />
+            </div>
           </div>
 
           <!-- Hamburgermeny-knapp -->
           <button class="menu-toggle" aria-label="Öppna meny">☰</button>
 
           <!-- Navigationsmeny -->
-          <nav class="nav">
-            <ul class="menu">
-              <li><a href="./index.html">Hem</a></li>
-              <li><a href="#">Om mig</a></li>
-              <li><a href="./process.html">Process</a></li>
-              <li><a href="./sass.html">Sass</a></li>
-              <li class="dropdown">
-                <a href="#">Produkter ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Produkt 1</a></li>
-                  <li><a href="#">Produkt 2</a></li>
-                  <li><a href="#">Produkt 3</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+          <div class="nav-wrapper">
+            <nav class="nav">
+              <ul class="menu">
+                <li><a href="./index.html">Hem</a></li>
+                <li><a href="#">Om mig</a></li>
+                <li><a href="./process.html">Process</a></li>
+                <li><a href="./sass.html">Sass</a></li>
+                <li class="dropdown">
+                  <a href="#">Produkter ▾</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Produkt 1</a></li>
+                    <li><a href="#">Produkt 2</a></li>
+                    <li><a href="#">Produkt 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <button id="theme-toggle">🌙 Dark Mode</button>
       </header>
@@ -51,7 +55,7 @@
         <section></section>
       </main>
       <footer class="footer">
-        <div class="footer-section">
+        <div class="legal-footer-section">
           <div class="logo-container">
             <picture>
               <!-- Standard SVG-logga -->
@@ -72,7 +76,7 @@
           <p>@2025 Färdtjänst Örebro</p>
           <p>Alla rättigheter förbehållna</p>
         </div>
-        <div class="footer-section">
+        <div class="company-footer-info">
           <h2>Huvudkontoret</h2>
           <address>
             <ul>
@@ -91,15 +95,15 @@
           </address>
         </div>
 
-        <div class="footer-section">
+        <div class="company-footer-info">
           <h2>Telefon</h2>
           <address>
-            <ul>
+            <ul class="menu">
               <li>070-132 45 67</li>
             </ul>
           </address>
 
-          <div class="social-media">
+          <div class="social-footer-menu">
             <h2>Följ oss</h2>
             <ul class="social-icons">
               <!-- Facebook -->
@@ -199,7 +203,7 @@
               <!-- LinkedIn -->
               <li class="social-icon linkedin">
                 <a
-                  class="icon square icon-bw"
+                  class="icon linkedin square icon-bw"
                   href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -220,10 +224,10 @@
             </ul>
           </div>
         </div>
-        <div class="footer-section">
+        <div class="legal-footer-menu">
           <h2>Våra riktlinjer</h2>
           <nav aria-label="Juridiska riktlinjer">
-            <ul>
+            <ul class="menu">
               <li><a href="#">Integritetspolicy</a></li>
               <li><a href="#">Cookie policy</a></li>
               <li><a href="#">Användarvillkor</a></li>
@@ -233,10 +237,10 @@
             </ul>
           </nav>
         </div>
-        <div class="footer-section">
+        <div class="menu-footer">
           <h2>Navigering</h2>
           <nav aria-label="Webbplatsnavigering">
-            <ul>
+            <ul class="menu">
               <li><a href="./index.html">Hem</a></li>
               <li><a href="./process.html">Process</a></li>
               <li><a href="./sass.html">Sass</a></li>

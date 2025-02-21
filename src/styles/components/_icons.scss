@@ -6,6 +6,10 @@
   @include icon-base($icon-size, $icon-shape);
 }
 
+.linkedin.icon {
+  @include icon-base(map-get($sizes, 'linkedin-icon'), $icon-shape);
+}
+
 // Form
 .circle {
   @include icon-base($icon-size, 'circle');
@@ -22,6 +26,16 @@
 
 .icon-bw {
   @include icon-bw($light-theme);
+}
+
+.icon-white.linkedin {
+  width: map-get($sizes, 'linkedin-width') !important;
+  height: map-get($sizes, 'linkedin-height') !important;
+}
+
+.icon-bw.linkedin {
+  width: map-get($sizes, 'linkedin-width') !important;
+  height: map-get($sizes, 'linkedin-height') !important;
 }
 
 // Ikoner för mörkt tema (ändras med .dark-mode)
@@ -41,4 +55,16 @@
 
 .dark-mode .social-icon {
   transition: $icon-transition;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // B ilden anpassas till containern
+}
+
+picture {
+  width: 32px !important;
+  height: 32px !important;
+  display: block;
 }

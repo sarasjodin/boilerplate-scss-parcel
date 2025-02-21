@@ -24,12 +24,12 @@
 
   .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
   }
-}
 
-li.social-icon:nth-child(5) img {
-  transform: translate(1.8px, -0.8px);
+  ul {
+    list-style: none;
+  }
 }
 
 // Mörkt tema

@@ -14,14 +14,26 @@ $colors: (
 $font-stack: 'Helvetica, Arial, sans-serif';
 
 $header-height: 60px;
+
 $sizes: (
   'icon': 32px,
+  'linkedin-width': 38px,
+  'linkedin-height': 32px,
   'header-height': 60px
 );
 
 $icon-shape: 'circle'; // Standardform
 $icon-header-height: map-get($sizes, 'header-height');
 $icon-size: map-get($sizes, 'icon');
+
+.icon {
+  width: map-get($sizes, 'icon') !important;
+  height: map-get($sizes, 'icon') !important;
+}
+
+.linkedin.icon {
+  width: map-get($sizes, 'linkedin-icon') !important;
+}
 
 // Breakpoints
 $breakpoints: (

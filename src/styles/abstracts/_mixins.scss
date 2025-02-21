@@ -11,10 +11,11 @@
 @mixin icon-base($size: $icon-size, $shape: $icon-shape) {
   width: $size;
   height: $size;
+  /* height: auto; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  /* margin: 5px; */
   transition: all 0.3s ease-in-out;
   background-color: transparent;
 
@@ -27,7 +28,7 @@
 }
 
 // Mixin helvit ikon
-@mixin icon-white($theme: $light-theme, $size: 40px) {
+@mixin icon-white($theme: $light-theme, $size: 36px) {
   @include icon-base($size);
   background-color: map-get($theme, 'primary');
 
@@ -39,7 +40,7 @@
 }
 
 // Mixin svartvit ikon
-@mixin icon-bw($theme: $light-theme, $size: 40px) {
+@mixin icon-bw($theme: $light-theme, $size: 36px) {
   @include icon-base($size);
   background-color: map-get($theme, 'secondary') !important;
 

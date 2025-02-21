@@ -25,23 +25,6 @@
       margin-right: 10px;
     }
   }
-
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-
-    li {
-      position: relative;
-
-      a {
-        text-decoration: none;
-        color: map-get($colors, 'white');
-        padding: 10px 15px;
-        display: block;
-      }
-    }
-  }
 }
 
 /* Små enheter (mobil) */
