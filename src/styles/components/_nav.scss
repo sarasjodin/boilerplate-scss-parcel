@@ -2,8 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .navbar {
-  background: map-get($colors, 'dark-bg');
-  color: map-get($colors, 'white');
+  background: map-get($light-theme, 'dark-bg');
+  color: map-get($light-theme, 'white');
   padding: 15px 20px;
 
   .container {
@@ -17,7 +17,7 @@
     display: flex;
     align-items: left;
     text-decoration: none;
-    color: map-get($colors, 'white');
+    color: map-get($light-theme, 'white');
     font-size: 1.5rem;
 
     img {

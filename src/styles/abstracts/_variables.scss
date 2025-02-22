@@ -1,15 +1,5 @@
 @use 'sass:color'; // Importera Sass färgfunktioner
 
-// Färgpalett
-$colors: (
-  'primary': #3498db,
-  'secondary': #2ecc71,
-  'gray-100': rgb(233, 233, 233),
-  'white': #ffffff,
-  'dark-bg': #333,
-  'icon-bg': #333
-);
-
 // Typografi
 $font-stack: 'Helvetica, Arial, sans-serif';
 
@@ -51,6 +41,8 @@ $breakpoints: (
 );
 
 $light-theme: (
+  'white': #ffffff,
+  'gray-100': rgb(233, 233, 233),
   'bg': #f9fafb,
   // Bakgrundsfärg
   'text': #1f2937,

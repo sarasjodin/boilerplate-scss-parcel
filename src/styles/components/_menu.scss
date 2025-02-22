@@ -11,7 +11,7 @@
 
     a {
       text-decoration: none;
-      color: map-get($colors, 'primary');
+      color: map-get($light-theme, 'primary');
       display: block;
     }
   }
@@ -45,7 +45,7 @@
 
 .footer .menu a {
   text-decoration: none;
-  color: map-get($colors, 'primary');
+  color: map-get($light-theme, 'primary');
   display: block;
 }
 

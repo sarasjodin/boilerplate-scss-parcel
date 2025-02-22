@@ -56,15 +56,15 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: map-get($colors, 'primary');
+  color: map-get($light-theme, 'primary');
 }
 
 h2 {
   font-size: 2rem;
-  color: map-get($colors, 'secondary');
+  color: map-get($light-theme, 'secondary');
 }
 
 p {
   font-size: 1rem;
-  color: map-get($colors, 'text');
+  color: map-get($light-theme, 'text');
 }

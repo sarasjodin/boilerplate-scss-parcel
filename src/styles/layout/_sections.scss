@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: map-get($colors, 'gray-100');
+  background: map-get($light-theme, 'gray-100');
   padding: 80px 20px;
   border-radius: 10px;
 
@@ -32,7 +32,7 @@
 }
 
 .features {
-  background: map-get($colors, 'white');
+  background: map-get($light-theme, 'white');
   padding: 50px;
   border-radius: 10px;
 }

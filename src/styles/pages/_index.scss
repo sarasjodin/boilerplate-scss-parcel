@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 body {
-  background-color: map-get($colors, 'primary'); // Korrekt syntax
+  background-color: map-get($light-theme, 'primary'); // Korrekt syntax
 }
 
 .home {

@@ -14,20 +14,20 @@ button {
   transition: background-color 0.3s ease;
 
   &.primary {
-    background-color: map-get($colors, 'primary');
+    background-color: map-get($light-theme, 'primary');
     color: white;
 
     &:hover {
-      background-color: darken(map-get($colors, 'primary'), 10%);
+      background-color: darken(map-get($light-theme, 'primary'), 10%);
     }
   }
 
   &.secondary {
-    background-color: map-get($colors, 'secondary');
+    background-color: map-get($light-theme, 'secondary');
     color: white;
 
     &:hover {
-      background-color: darken(map-get($colors, 'secondary'), 10%);
+      background-color: darken(map-get($light-theme, 'secondary'), 10%);
     }
   }
 }
