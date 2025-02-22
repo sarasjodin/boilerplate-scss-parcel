@@ -1,70 +1,54 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as vars;
 
+// Global typografi
+body {
+  font-family: vars.$font-stack;
+  line-height: 1.6;
+  font-size: 16px;
+  color: map-get(vars.$light-theme, 'text');
+}
+
+// Rubriker med ett särskilt typsnitt
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-p,
-li,
+.heading {
+  font-family: vars.$font-inter;
+}
+
+// Gemensam textfärg för länkar
 a {
-  color: map-get($light-theme, 'text');
-  font-family: 'Helvetica, Arial, sans-serif';
+  color: map-get(vars.$light-theme, 'primary');
 }
 
-// 🌙 Mörkt tema
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode p,
-.dark-mode li,
-.dark-mode a {
-  color: map-get($dark-theme, 'text') !important;
-}
-
+// Specifika rubrikstilar
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  color: map-get(vars.$light-theme, 'primary');
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
+  color: map-get(vars.$light-theme, 'primary');
 }
 
-h1,
-h2,
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: map-get(vars.$light-theme, 'primary');
 }
 
 ul {
   list-style-type: disc;
 }
 
-p {
-  margin-bottom: 5px;
-}
-
 body {
   font-family: 'Inter', sans-serif;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: map-get($light-theme, 'primary');
-}
-
-h2 {
-  font-size: 2rem;
-  color: map-get($light-theme, 'secondary');
-}
-
 p {
-  font-size: 1rem;
-  color: map-get($light-theme, 'text');
+  font-size: 1.3rem;
+  color: map-get(vars.$light-theme, 'text');
 }

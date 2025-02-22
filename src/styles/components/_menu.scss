@@ -55,10 +55,8 @@
 
 .footer a[href^='mailto:'] {
   color: map-get($light-theme, 'primary');
-  font-weight: bold;
 }
 
 .dark-mode .footer a[href^='mailto:'] {
   color: map-get($dark-theme, 'primary');
-  font-weight: bold;
 }

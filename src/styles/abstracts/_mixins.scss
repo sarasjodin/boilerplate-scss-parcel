@@ -42,7 +42,7 @@
 // Mixin svartvit ikon
 @mixin icon-bw($theme: $light-theme, $size: 36px) {
   @include icon-base($size);
-  background-color: map-get($theme, 'secondary') !important;
+  background-color: map-get($theme, 'primary') !important;
 
   img {
     filter: grayscale(100%);

@@ -120,173 +120,187 @@
             </ul>
           </nav>
         </div>
-        <button id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
       </header>
-      <main>
-        <h1>More About My "Sassy Website"</h1>
-        <p>
-          This project is part of the Web Development program at Mid Sweden
-          University and involves creating a website using Node.js, NPM, Parcel,
-          and Sass (SCSS).
-        </p>
-        <section>
-          <h2>Purpose of the Assignment</h2>
-          <ul>
-            <li>Understand the purpose of CSS preprocessors.</li>
-            <li>Learn how to use SASS to simplify CSS development.</li>
-            <li>
-              Practically apply the development environment set up in previous
-              modules.
-            </li>
-            <li>
-              Be able to automate the conversion of SASS files using Parcel.
-            </li>
-          </ul>
+      <main id="sass-page">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>More About My "Sassy Website"</h1>
+            <p>
+              This project is part of the Web Development program at Mid Sweden
+              University and involves creating a website using Node.js, NPM,
+              Parcel, and Sass (SCSS).
+            </p>
+          </div>
         </section>
-        <section>
-          <h2>Minimum Requirements</h2>
-          <ul>
-            <li>
-              A simple, fictional website with at least five menu options (not
-              all need to be functional).
-            </li>
-            <li>
-              At least two HTML pages (a homepage and a subpage about Sass).
-            </li>
-            <li>
-              Based on a Parcel boilerplate, but without reusing old CSS files.
-            </li>
-            <li>
-              Use of variables (at least the color scheme should be stored as
-              variables).
-            </li>
-            <li>
-              Color functions (at minimum, `darken` and `lighten` should be
-              used, but more are encouraged).
-            </li>
-            <li>
-              Nesting, Mixins, and Selector Inheritance (using the `@extend`
-              keyword).
-            </li>
-            <li>
-              If/else statements, at least one partial, and a well-structured
-              CSS file organization.
-            </li>
-            <li>
-              Deployment should not use FTP/SFTP hosting but instead platforms
-              such as GitHub Pages, Netlify, Vercel, or Render.
-            </li>
-          </ul>
+        <section class="features">
+          <div>
+            <h2>Purpose of the Assignment</h2>
+            <ul>
+              <li>Understand the purpose of CSS preprocessors.</li>
+              <li>Learn how to use SASS to simplify CSS development.</li>
+              <li>
+                Practically apply the development environment set up in previous
+                modules.
+              </li>
+              <li>
+                Be able to automate the conversion of SASS files using Parcel.
+              </li>
+            </ul>
+          </div>
         </section>
-        <section>
-          <h2>My Evaluation</h2>
-          <p>
-            Sass extends the functionality of regular CSS by introducing
-            powerful features that make styling more efficient, maintainable,
-            and scalable. Some key advantages and disadvantages of using Sass
-            include:
-          </p>
-
-          <h3>Pros of the CSS Preprocessor Sass</h3>
-          <ul>
-            <li>
-              <strong>Better Organization</strong><br />Using partials and
-              imports allows for a structured and modular CSS approach.
-            </li>
-            <li>
-              <strong>Variables</strong><br />Define colors, font sizes, and
-              other values in one place and reuse them throughout the styles.
-            </li>
-            <li>
-              <strong>Mixins</strong><br />Write reusable blocks of CSS to avoid
-              code repetition and improve maintainability.
-            </li>
-            <li>
-              <strong>Selector Inheritance (`@extend`)</strong><br />Helps in
-              reducing redundancy by allowing shared styles between elements.
-            </li>
-            <li>
-              <strong>Functions & Nesting</strong><br />Improves readability and
-              makes it easier to write CSS with logical hierarchy.
-            </li>
-            <li>
-              <strong>Math Operations</strong><br />Enables calculations
-              directly in CSS, such as adjusting padding or font sizes
-              dynamically.
-            </li>
-          </ul>
-
-          <h3>Cons of the CSS Preprocessor Sass</h3>
-          <ul>
-            <li>
-              <strong>Learning Curve</strong><br />While Sass simplifies many
-              CSS tasks, beginners may find it overwhelming at first.
-            </li>
-            <li>
-              <strong>Compilation Required</strong><br />Unlike standard CSS,
-              Sass needs to be compiled into regular CSS before it can be used
-              in the browser. Parcel is taking care of that for this website.
-            </li>
-            <li>
-              <strong>Can Encourage Overuse</strong><br />Nesting too deeply can
-              lead to overly specific and difficult-to-maintain styles.
-            </li>
-            <li>
-              <strong>Tooling Dependency</strong><br />Requires Node.js, npm,
-              and build tools like Parcel or Webpack, which adds complexity.
-            </li>
-          </ul>
+        <section class="features">
+          <div>
+            <h2>Minimum Requirements</h2>
+            <ul>
+              <li>
+                A simple, fictional website with at least five menu options (not
+                all need to be functional).
+              </li>
+              <li>
+                At least two HTML pages (a homepage and a subpage about Sass).
+              </li>
+              <li>
+                Based on a Parcel boilerplate, but without reusing old CSS
+                files.
+              </li>
+              <li>
+                Use of variables (at least the color scheme should be stored as
+                variables).
+              </li>
+              <li>
+                Color functions (at minimum, `darken` and `lighten` should be
+                used, but more are encouraged).
+              </li>
+              <li>
+                Nesting, Mixins, and Selector Inheritance (using the `@extend`
+                keyword).
+              </li>
+              <li>
+                If/else statements, at least one partial, and a well-structured
+                CSS file organization.
+              </li>
+              <li>
+                Deployment should not use FTP/SFTP hosting but instead platforms
+                such as GitHub Pages, Netlify, Vercel, or Render.
+              </li>
+            </ul>
+          </div>
         </section>
-        <section>
-          <h3>How Was It to Get Started Working with a CSS Preprocessor?</h3>
-
-          <article>
-            <h4>The Initial Challenge</h4>
+        <section class="features">
+          <div>
+            <h2>My Evaluation</h2>
             <p>
-              Transitioning from regular CSS to Sass was initially overwhelming
-              due to the new syntax and additional setup required. Instead of
-              taking small steps, I decided to dive straight into the
-              <strong>7-1 pattern method</strong>, which is quite complex for
-              someone without much prior Sass experience.
+              Sass extends the functionality of regular CSS by introducing
+              powerful features that make styling more efficient, maintainable,
+              and scalable. Some key advantages and disadvantages of using Sass
+              include:
             </p>
-          </article>
 
-          <article>
-            <h4>The Learning Curve</h4>
-            <p>
-              As I became more comfortable with
-              <strong>variables, mixins, and nesting</strong>, I quickly
-              realized the immense benefits of Sass. The ability to store and
-              reuse values significantly reduced redundancy, and nesting made my
-              stylesheets more structured and readable.
-            </p>
-          </article>
+            <h3>Pros of the CSS Preprocessor Sass</h3>
+            <ul>
+              <li>
+                <strong>Better Organization</strong><br />Using partials and
+                imports allows for a structured and modular CSS approach.
+              </li>
+              <li>
+                <strong>Variables</strong><br />Define colors, font sizes, and
+                other values in one place and reuse them throughout the styles.
+              </li>
+              <li>
+                <strong>Mixins</strong><br />Write reusable blocks of CSS to
+                avoid code repetition and improve maintainability.
+              </li>
+              <li>
+                <strong>Selector Inheritance (`@extend`)</strong><br />Helps in
+                reducing redundancy by allowing shared styles between elements.
+              </li>
+              <li>
+                <strong>Functions & Nesting</strong><br />Improves readability
+                and makes it easier to write CSS with logical hierarchy.
+              </li>
+              <li>
+                <strong>Math Operations</strong><br />Enables calculations
+                directly in CSS, such as adjusting padding or font sizes
+                dynamically.
+              </li>
+            </ul>
 
-          <article>
-            <h4>Boosting Efficiency with Automation</h4>
-            <p>
-              One of the biggest game-changers was automating the Sass
-              compilation process using <strong>Parcel</strong>. This made it
-              seamless to integrate Sass into my workflow, eliminating the need
-              for manual CSS updates and ensuring that all styles were
-              efficiently processed.
-            </p>
-          </article>
+            <h3>Cons of the CSS Preprocessor Sass</h3>
+            <ul>
+              <li>
+                <strong>Learning Curve</strong><br />While Sass simplifies many
+                CSS tasks, beginners may find it overwhelming at first.
+              </li>
+              <li>
+                <strong>Compilation Required</strong><br />Unlike standard CSS,
+                Sass needs to be compiled into regular CSS before it can be used
+                in the browser. Parcel is taking care of that for this website.
+              </li>
+              <li>
+                <strong>Can Encourage Overuse</strong><br />Nesting too deeply
+                can lead to overly specific and difficult-to-maintain styles.
+              </li>
+              <li>
+                <strong>Tooling Dependency</strong><br />Requires Node.js, npm,
+                and build tools like Parcel or Webpack, which adds complexity.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h3>How Was It to Get Started Working with a CSS Preprocessor?</h3>
 
-          <article>
-            <h4>The Power of Structured Styling</h4>
-            <p>
-              The fact that multiple stylesheets can be
-              <strong
-                >structured and managed through a single
-                <code>main.scss</code> file</strong
-              >
-              has made my development process much smoother. By organizing my
-              styles into different partials, I can maintain a clean and
-              scalable codebase, making future updates and modifications
-              effortless.
-            </p>
-          </article>
+            <article>
+              <h4>The Initial Challenge</h4>
+              <p>
+                Transitioning from regular CSS to Sass was initially
+                overwhelming due to the new syntax and additional setup
+                required. Instead of taking small steps, I decided to dive
+                straight into the
+                <strong>7-1 pattern method</strong>, which is quite complex for
+                someone without much prior Sass experience.
+              </p>
+            </article>
+
+            <article>
+              <h4>The Learning Curve</h4>
+              <p>
+                As I became more comfortable with
+                <strong>variables, mixins, and nesting</strong>, I quickly
+                realized the immense benefits of Sass. The ability to store and
+                reuse values significantly reduced redundancy, and nesting made
+                my stylesheets more structured and readable.
+              </p>
+            </article>
+
+            <article>
+              <h4>Boosting Efficiency with Automation</h4>
+              <p>
+                One of the biggest game-changers was automating the Sass
+                compilation process using <strong>Parcel</strong>. This made it
+                seamless to integrate Sass into my workflow, eliminating the
+                need for manual CSS updates and ensuring that all styles were
+                efficiently processed.
+              </p>
+            </article>
+
+            <article>
+              <h4>The Power of Structured Styling</h4>
+              <p>
+                The fact that multiple stylesheets can be
+                <strong
+                  >structured and managed through a single
+                  <code>main.scss</code> file</strong
+                >
+                has made my development process much smoother. By organizing my
+                styles into different partials, I can maintain a clean and
+                scalable codebase, making future updates and modifications
+                effortless.
+              </p>
+            </article>
+          </div>
         </section>
       </main>
 
@@ -359,7 +373,7 @@
           </address>
         </div>
 
-        <div class="company-footer-info">
+        <div class="company-footer-contact">
           <h2>Email me</h2>
           <address>
             <ul>
@@ -400,6 +414,28 @@
                     <img
                       src="./images/facebook.png"
                       alt="Facebook"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="social-icon linkedin">
+                <a
+                  class="icon linkedin square icon-bw"
+                  href="https://it.linkedin.com/in/sjodinscolari"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår LinkedIn-sida"
+                >
+                  <picture>
+                    <source srcset="./images/linkedin.webp" type="image/webp" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn"
                       width="32"
                       height="32"
                       loading="lazy"
@@ -479,28 +515,6 @@
                   </picture>
                 </a>
               </li> -->
-
-              <!-- LinkedIn -->
-              <li class="social-icon linkedin">
-                <a
-                  class="icon linkedin square icon-bw"
-                  href="https://it.linkedin.com/in/sjodinscolari"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besök vår LinkedIn-sida"
-                >
-                  <picture>
-                    <source srcset="./images/linkedin.webp" type="image/webp" />
-                    <img
-                      src="./images/linkedin.png"
-                      alt="LinkedIn"
-                      width="32"
-                      height="32"
-                      loading="lazy"
-                    />
-                  </picture>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

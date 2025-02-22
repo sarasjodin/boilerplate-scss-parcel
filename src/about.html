@@ -119,58 +119,65 @@
             </ul>
           </nav>
         </div>
-        <button id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
       </header>
-      <main>
-        <h1>About Me</h1>
-        <section>
-          <h2>Hi! My name is Sara Sjödin Scolari</h2>
-          <p>
-            I am a passionate web developer specializing in frontend and modern
-            web solutions. With experience in HTML, CSS, JavaScript, SCSS, and
-            modern build tools like Parcel, I create fast, responsive, and
-            visually appealing websites.
-          </p>
+      <main id="about-page">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>About me</h1>
+            <p>
+              Hi! My name is Sara Sjödin Scolari.<br />I am a passionate web
+              developer specializing in frontend and modern web solutions. With
+              experience in HTML, CSS, JavaScript, SCSS, and modern build tools
+              like Parcel, I create fast, responsive, and visually appealing
+              websites.
+            </p>
+          </div>
         </section>
-        <section>
-          <h2>Why Choose Me?</h2>
-          <ul>
-            <li>
-              <strong>✔ Pixel-perfect design</strong><br />I transform ideas
-              into sleek, responsive websites.
-            </li>
-            <li>
-              <strong>✔ Performance and SEO optimization</strong><br />Fast
-              loading times and search engine-friendly structures.
-            </li>
-            <li>
-              <strong>✔ Dark Mode and Light Mode</strong><br />Modern and
-              user-friendly design for all devices.
-            </li>
-            <li>
-              <strong>✔ SASS and CSS preprocessors</strong><br />Efficient code
-              structure and scalable solutions.
-            </li>
-            <li>
-              <strong>✔ Animations and UI effects</strong><br />Creating an
-              engaging experience with smooth effects.
-            </li>
-            <li>
-              <strong>✔ User-centered approach</strong><br />Websites that are
-              accessible, responsive, and user-friendly.
-            </li>
-          </ul>
-          <p>Let's create something amazing together!</p>
-          <p>[Contact me here]</p>
+        <section class="features">
+          <div>
+            <h2>Why Choose Me?</h2>
+            <ul>
+              <li>
+                <strong>✔ Pixel-perfect design</strong><br />I transform ideas
+                into sleek, responsive websites.
+              </li>
+              <li>
+                <strong>✔ Performance and SEO optimization</strong><br />Fast
+                loading times and search engine-friendly structures.
+              </li>
+              <li>
+                <strong>✔ Dark Mode and Light Mode</strong><br />Modern and
+                user-friendly design for all devices.
+              </li>
+              <li>
+                <strong>✔ SASS and CSS preprocessors</strong><br />Efficient
+                code structure and scalable solutions.
+              </li>
+              <li>
+                <strong>✔ Animations and UI effects</strong><br />Creating an
+                engaging experience with smooth effects.
+              </li>
+              <li>
+                <strong>✔ User-centered approach</strong><br />Websites that are
+                accessible, responsive, and user-friendly.
+              </li>
+            </ul>
+            <p>Let's create something amazing together!</p>
+            <p>[Contact me here]</p>
+          </div>
         </section>
-        <section>
-          <h2>About this website</h2>
-          <p>
-            This website is part of my web development studies, where I explore
-            the power of modern tools like Sass, Parcel, and CSS preprocessors.
-            The goal is to build a structured, scalable, and responsive website
-            while implementing best practices in frontend development.
-          </p>
+        <section class="hero">
+          <div class="hero-content">
+            <h2>About this website</h2>
+            <p>
+              This website is part of my web development studies, where I
+              explore the power of modern tools like Sass, Parcel, and CSS
+              preprocessors. The goal is to build a structured, scalable, and
+              responsive website while implementing best practices in frontend
+              development.
+            </p>
+          </div>
         </section>
       </main>
 
@@ -243,7 +250,7 @@
           </address>
         </div>
 
-        <div class="company-footer-info">
+        <div class="company-footer-contact">
           <h2>Email me</h2>
           <address>
             <ul>
@@ -285,6 +292,28 @@
                     <img
                       src="./images/facebook.png"
                       alt="Facebook"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="social-icon linkedin">
+                <a
+                  class="icon linkedin square icon-bw"
+                  href="https://it.linkedin.com/in/sjodinscolari"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår LinkedIn-sida"
+                >
+                  <picture>
+                    <source srcset="./images/linkedin.webp" type="image/webp" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn"
                       width="32"
                       height="32"
                       loading="lazy"
@@ -364,28 +393,6 @@
                   </picture>
                 </a>
               </li> -->
-
-              <!-- LinkedIn -->
-              <li class="social-icon linkedin">
-                <a
-                  class="icon linkedin square icon-bw"
-                  href="https://it.linkedin.com/in/sjodinscolari"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besök vår LinkedIn-sida"
-                >
-                  <picture>
-                    <source srcset="./images/linkedin.webp" type="image/webp" />
-                    <img
-                      src="./images/linkedin.png"
-                      alt="LinkedIn"
-                      width="32"
-                      height="32"
-                      loading="lazy"
-                    />
-                  </picture>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

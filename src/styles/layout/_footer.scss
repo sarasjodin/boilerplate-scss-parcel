@@ -10,8 +10,6 @@
   padding: 20px;
   text-align: left;
 
-  h1,
-  h2,
   h3,
   h4,
   h5,
@@ -29,11 +27,52 @@
 
   ul {
     list-style: none;
-
-    li {
-      padding: 5px 0;
-    }
   }
+
+  .company-footer-info address ul {
+    list-style: unset;
+    padding-left: 25px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: map-get($light-theme, 'footer-text');
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25),
+      0 0 4px rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h2:not(:first-of-type) {
+    margin: 1rem 0 0 0;
+  }
+
+  address {
+    font-style: normal !important;
+  }
+
+  .logo-container img {
+    margin-top: 15px;
+    border-radius: 50%;
+  }
+
+  .social-footer-menu h2 {
+    margin-top: 15px;
+  }
+}
+
+footer p,
+footer li {
+  font-size: 1rem;
 }
 
 // Mörkt tema
@@ -51,29 +90,4 @@
   a {
     color: map-get($dark-theme, 'footer-text');
   }
-}
-
-h2 {
-  font-size: 1.4rem;
-}
-
-h2:not(:first-of-type) {
-  margin-top: 15px;
-}
-
-h3 {
-  margin-top: 10px;
-}
-
-address {
-  font-style: normal !important;
-}
-
-.logo-container img {
-  margin-top: 15px;
-  border-radius: 50%;
-}
-
-.social-footer-menu h2 {
-  margin-top: 15px;
 }

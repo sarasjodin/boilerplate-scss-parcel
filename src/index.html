@@ -120,7 +120,7 @@
             </ul>
           </nav>
         </div>
-        <button id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
       </header>
       <main>
         <section class="hero">
@@ -140,13 +140,13 @@
                 href="https://saras-portfolio.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="button primary"
+                class="button secondary"
                 aria-label="View Sara's portfolio (opens in a new tab)"
                 >View My Portfolio 🔗</a
               >
               <a
                 href="mailto:sara@sarasjodin.com"
-                class="button secondary"
+                class="button primary"
                 aria-label="Contact Sara via email"
                 >Contact Me</a
               >
@@ -155,72 +155,75 @@
         </section>
 
         <section class="features">
-          <h2>What You’ll Find Here</h2>
-          <ul>
-            <li>
-              <strong>✔ A deep dive into Sass & CSS preprocessors</strong><br />
-              Learn how
-              <strong>variables, mixins, and nesting</strong> streamline CSS
-              development.
-            </li>
-            <li>
-              <strong
-                >✔ My structured development process & best practices</strong
-              ><br />
-              Organized file structures, maintainable code, and
-              <strong>efficient styling</strong>.
-            </li>
-            <li>
-              <strong>✔ Dark & Light Mode switch</strong><br />
-              Modern <strong>UI/UX implementation</strong> for an
-              <strong>adaptive user experience</strong>.
-            </li>
-            <li>
-              <strong>✔ Portfolio projects</strong><br />
-              Real-world applications including:
-              <ul class="portfolio-links">
-                <li>
-                  <a
-                    href="https://ai-poems-generator.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="AI Poem Generator (opens in a new tab)"
-                  >
-                    AI Poem Generator 🔗
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://climasense.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Weather App (opens in a new tab)"
-                  >
-                    Weather App 🔗
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://timezonesclocks.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Time Zone Converter (opens in a new tab)"
-                  >
-                    Time Zone Converter 🔗
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong
-                >✔ Insights into SEO, performance optimization & UI/UX
-                principles</strong
-              ><br />
-              Creating
-              <strong>fast-loading, accessible, and user-friendly</strong>
-              websites.
-            </li>
-          </ul>
+          <div>
+            <h2>What You’ll Find Here</h2>
+            <ul>
+              <li>
+                <strong>✔ A deep dive into Sass & CSS preprocessors</strong
+                ><br />
+                Learn how
+                <strong>variables, mixins, and nesting</strong> streamline CSS
+                development.
+              </li>
+              <li>
+                <strong
+                  >✔ My structured development process & best practices</strong
+                ><br />
+                Organized file structures, maintainable code, and
+                <strong>efficient styling</strong>.
+              </li>
+              <li>
+                <strong>✔ Dark & Light Mode switch</strong><br />
+                Modern <strong>UI/UX implementation</strong> for an
+                <strong>adaptive user experience</strong>.
+              </li>
+              <li>
+                <strong>✔ Portfolio projects</strong><br />
+                Real-world applications including:
+                <ul class="portfolio-links">
+                  <li>
+                    <a
+                      href="https://ai-poems-generator.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="AI Poem Generator (opens in a new tab)"
+                    >
+                      AI Poem Generator 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://climasense.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Weather App (opens in a new tab)"
+                    >
+                      Weather App 🔗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://timezonesclocks.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Time Zone Converter (opens in a new tab)"
+                    >
+                      Time Zone Converter 🔗
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong
+                  >✔ Insights into SEO, performance optimization & UI/UX
+                  principles</strong
+                ><br />
+                Creating
+                <strong>fast-loading, accessible, and user-friendly</strong>
+                websites.
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
 
@@ -293,7 +296,7 @@
           </address>
         </div>
 
-        <div class="company-footer-info">
+        <div class="company-footer-contact">
           <h2>Email me</h2>
           <address>
             <ul>
@@ -334,6 +337,28 @@
                     <img
                       src="./images/facebook.png"
                       alt="Facebook logotyp"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="social-icon linkedin">
+                <a
+                  class="icon linkedin square icon-bw"
+                  href="https://it.linkedin.com/in/sjodinscolari"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår LinkedIn-sida"
+                >
+                  <picture>
+                    <source srcset="./images/linkedin.webp" type="image/webp" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn logotyp"
                       width="32"
                       height="32"
                       loading="lazy"
@@ -413,28 +438,6 @@
                   </picture>
                 </a>
               </li> -->
-
-              <!-- LinkedIn -->
-              <li class="social-icon linkedin">
-                <a
-                  class="icon linkedin square icon-bw"
-                  href="https://it.linkedin.com/in/sjodinscolari"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besök vår LinkedIn-sida"
-                >
-                  <picture>
-                    <source srcset="./images/linkedin.webp" type="image/webp" />
-                    <img
-                      src="./images/linkedin.png"
-                      alt="LinkedIn logotyp"
-                      width="32"
-                      height="32"
-                      loading="lazy"
-                    />
-                  </picture>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

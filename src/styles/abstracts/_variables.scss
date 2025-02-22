@@ -1,7 +1,12 @@
 @use 'sass:color'; // Importera Sass färgfunktioner
 
 // Typografi
-$font-stack: 'Helvetica, Arial, sans-serif';
+// Om Google Fonts laddas ska följade fontfamiljer användas
+$font-poppins: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+$font-inter: 'Inter', 'Roboto', sans-serif;
+
+// Som generell fontstack används
+$font-stack: $font-poppins;
 
 /* $header-height: 100px; */
 
@@ -59,7 +64,7 @@ $light-theme: (
   'header-bg': #f3f4f6,
   'header-text': #1f2937,
   'footer-bg': #e5e7eb,
-  'footer-text': #1f2937
+  'footer-text': #223146
 );
 
 // Teman
@@ -92,6 +97,8 @@ $button-transition: background-color 0.3s ease, color 0.3s ease,
 // Standard animationer
 $fade-duration: 0.5s;
 $fade-animation: fade-in $fade-duration forwards;
+
+$text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
 
 // Keyframe för fade-in
 @keyframes fade-in {

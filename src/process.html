@@ -120,62 +120,76 @@
             </ul>
           </nav>
         </div>
-        <button id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
       </header>
-      <main>
-        <h1>
-          From Idea to Deployment<br />Building a Website with Sass 7-1 method
-          and Parcel automation
-        </h1>
-        <section>
-          <h2>Key Learnings</h2>
-          <h2>My Development Process</h2>
-          <ol>
-            <li>
-              Reused a previous boilerplate (but removed all previous css code)
-            </li>
-            <li>
-              Created the 7-1 patters for Sass and its main.scss file with @use
-            </li>
-            <li>Installed Sass <code>npm install sass -D</code></li>
-            <li>
-              Experimented with a Bootstrap menu for large screens Bootstrap
-              Offcanvas responsive menu
-            </li>
-            <li>
-              Realized that I was alreay developing and had to start commiting
-              to GitHub...
-            </li>
-            <li>Created the GitHub repository!</li>
-            <li>
-              I decided to use Render for this site. But I+m also used to
-              Netlify and GitHub Pages for CI/CD deployment.
-              <a
-                href="https://boilerplate-scss-parcel.onrender.com/"
-                target="_blank"
-                rel="noreferral nooperer"
-                >My scss parcel boilerplate</a
-              >
-            </li>
-            <li>
-              Decided to create a pure scss site, to avoid Bootstrap dependancy
-              problems for my first scss-site.
-            </li>
-          </ol>
+      <main id="process-page">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>
+              From Idea to Deployment<br />Building a Website with Sass 7-1
+              method and Parcel automation
+            </h1>
+          </div>
         </section>
-        <section>
-          <h2>For this web site I have implemented</h2>
-          <ul>
-            <li>
-              social icons with shape, size and... variables including if
-              statement
-            </li>
-            <li>light and dark theme with theme button</li>
-            <li>Responsive header with a hamburger menu for mobiles</li>
-            <li>Breakpoint variables for media queries</li>
-          </ul>
+        <section class="features">
+          <div>
+            <h2>Key Learnings</h2>
+          </div>
         </section>
-        <section>
+        <section class="features">
+          <div>
+            <h2>My Development Process</h2>
+            <ol>
+              <li>
+                Reused a previous boilerplate (but removed all previous css
+                code)
+              </li>
+              <li>
+                Created the 7-1 patters for Sass and its main.scss file with
+                @use
+              </li>
+              <li>Installed Sass <code>npm install sass -D</code></li>
+              <li>
+                Experimented with a Bootstrap menu for large screens Bootstrap
+                Offcanvas responsive menu
+              </li>
+              <li>
+                Realized that I was alreay developing and had to start commiting
+                to GitHub...
+              </li>
+              <li>Created the GitHub repository!</li>
+              <li>
+                I decided to use Render for this site. But I+m also used to
+                Netlify and GitHub Pages for CI/CD deployment.
+                <a
+                  href="https://boilerplate-scss-parcel.onrender.com/"
+                  target="_blank"
+                  rel="noreferral nooperer"
+                  >My scss parcel boilerplate</a
+                >
+              </li>
+              <li>
+                Decided to create a pure scss site, to avoid Bootstrap
+                dependancy problems for my first scss-site.
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section class="features">
+          <div>
+            <h2>For this web site I have implemented</h2>
+            <ul>
+              <li>
+                social icons with shape, size and... variables including if
+                statement
+              </li>
+              <li>light and dark theme with theme button</li>
+              <li>Responsive header with a hamburger menu for mobiles</li>
+              <li>Breakpoint variables for media queries</li>
+            </ul>
+          </div>
+        </section>
+        <section class="features">
           <h2>File structure</h2>
           <pre>
             <code>
@@ -201,15 +215,14 @@
               │   ├──📄 _about.scss        # About page styling
               │   ├──📄 _sass.scss         # Sass page styling
               │   └──📄 _process.scss      # Process page styling
-              ├── 📂 themes/             # Dark/Light theme styles
-              │   ├──📄 _dark.scss         # Dark mode styles
-              │   └──📄 _light.scss        # Light mode styles
+              ├── 📂 themes/             # Theme styles
+              │   └──📄 _theme.scss         # Light & Dark mode styles
               └📄 main.scss               # Main SCSS file importing everything
             </code>
           </pre>
         </section>
 
-        <section></section>
+        <section class="features"><div></div></section>
       </main>
 
       <footer class="footer">
@@ -281,7 +294,7 @@
           </address>
         </div>
 
-        <div class="company-footer-info">
+        <div class="company-footer-contact">
           <h2>Email me</h2>
           <address>
             <ul>
@@ -322,6 +335,28 @@
                     <img
                       src="./images/facebook.png"
                       alt="Facebook"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="social-icon linkedin">
+                <a
+                  class="icon linkedin square icon-bw"
+                  href="https://it.linkedin.com/in/sjodinscolari"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Besök vår LinkedIn-sida"
+                >
+                  <picture>
+                    <source srcset="./images/linkedin.webp" type="image/webp" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn"
                       width="32"
                       height="32"
                       loading="lazy"
@@ -401,28 +436,6 @@
                   </picture>
                 </a>
               </li> -->
-
-              <!-- LinkedIn -->
-              <li class="social-icon linkedin">
-                <a
-                  class="icon linkedin square icon-bw"
-                  href="https://it.linkedin.com/in/sjodinscolari"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Besök vår LinkedIn-sida"
-                >
-                  <picture>
-                    <source srcset="./images/linkedin.webp" type="image/webp" />
-                    <img
-                      src="./images/linkedin.png"
-                      alt="LinkedIn"
-                      width="32"
-                      height="32"
-                      loading="lazy"
-                    />
-                  </picture>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

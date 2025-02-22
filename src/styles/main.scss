@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+// 0. Vendor-stilar (Externa bibliotek)
+@use 'vendors/normalize';
+
 // 1. Abstrakta moduler (variabler, mixins, functions)
 @forward 'abstracts/variables';
 @forward 'abstracts/mixins';
@@ -34,6 +37,3 @@
 
 // 6. Teman (valfritt, om du använder teman)
 @use 'themes/theme';
-
-// 7. Vendor-stilar (exempelvis Bootstrap, externa bibliotek)
-@use 'vendors/normalize';
