@@ -2,33 +2,48 @@
 
 body {
   background-color: map-get(vars.$light-theme, 'bg');
+  color: map-get(vars.$light-theme, 'text');
   transition: vars.$default-transition;
 }
 
+// Generic dark mode
 .dark-mode {
   background-color: map-get(vars.$dark-theme, 'bg');
   color: map-get(vars.$dark-theme, 'text');
   transition: vars.$default-transition;
+}
 
-  .hero,
-  #about-page .hero,
-  #sass-page .hero,
-  #process-page .hero {
-    background-color: map-get(vars.$dark-theme, 'bg');
-    color: map-get(vars.$dark-theme, 'text');
-  }
+// Typography
+h1,
+h2,
+h3,
+a {
+  color: map-get(vars.$light-theme, 'primary');
+}
+
+p,
+li {
+  color: map-get(vars.$light-theme, 'text');
 }
 
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode p,
-.dark-mode li,
 .dark-mode a {
+  color: map-get(vars.$dark-theme, 'primary') !important;
+}
+.dark-mode p,
+.dark-mode li {
   color: map-get(vars.$dark-theme, 'text') !important;
+}
+
+// Navbar
+.navbar {
+  background: map-get(vars.$light-theme, 'dark-bg');
+  color: map-get(vars.$light-theme, 'white');
+  .logo {
+    color: map-get(vars.$light-theme, 'white');
+  }
 }
 
 .dark-mode {
@@ -39,5 +54,160 @@ body {
   .features {
     background-color: map-get(vars.$dark-theme, 'header-bg');
     color: map-get(vars.$dark-theme, 'header-text');
+  }
+}
+
+.dropdown-menu {
+  background: map-get(vars.$light-theme, 'header-bg');
+  color: map-get(vars.$light-theme, 'header-text');
+}
+
+.dark-mode .dropdown-menu {
+  background-color: map-get(vars.$dark-theme, 'header-bg') !important;
+  color: map-get(vars.$dark-theme, 'header-text');
+}
+
+button {
+  transition: vars.$button-transition;
+}
+
+.button {
+  transition: background-color 0.3s ease;
+  text-shadow: vars.$text-shadow;
+
+  &.primary {
+    background-color: map-get(vars.$light-theme, 'primary');
+    color: map-get(vars.$light-theme, 'white');
+
+    &:hover {
+      background-color: darken(map-get(vars.$light-theme, 'primary'), 20%);
+    }
+  }
+
+  &.secondary {
+    background-color: map-get(vars.$light-theme, 'secondary');
+    color: map-get(vars.$light-theme, 'white');
+
+    &:hover {
+      background-color: darken(map-get(vars.$light-theme, 'secondary'), 20%);
+    }
+  }
+}
+
+.dark-mode .button {
+  transition: background-color 0.3s ease;
+  text-shadow: vars.$text-shadow;
+
+  &.primary {
+    background-color: map-get(vars.$dark-theme, 'primary');
+    color: map-get(vars.$dark-theme, 'white');
+
+    &:hover {
+      background-color: darken(map-get(vars.$dark-theme, 'primary'), 20%);
+    }
+  }
+
+  &.secondary {
+    background-color: map-get(vars.$dark-theme, 'secondary');
+    color: map-get(vars.$dark-theme, 'white');
+
+    &:hover {
+      background-color: darken(map-get(vars.$dark-theme, 'secondary'), 20%);
+    }
+  }
+}
+
+.footer {
+  background: map-get(vars.$light-theme, 'footer-bg');
+  color: map-get(vars.$light-theme, 'footer-text');
+  transition: vars.$default-transition;
+
+  h2 {
+    color: map-get(vars.$light-theme, 'footer-text');
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25),
+      0 0 4px rgba(255, 255, 255, 0.2);
+  }
+  h3,
+  a {
+    color: map-get(vars.$light-theme, 'primary');
+  }
+}
+
+// Mörkt tema
+.dark-mode .footer {
+  background: map-get(vars.$dark-theme, 'footer-bg');
+  color: map-get(vars.$dark-theme, 'footer-text');
+  transition: vars.$default-transition;
+
+  h2 {
+    color: map-get(vars.$dark-theme, 'header-text');
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25),
+      0 0 4px rgba(255, 255, 255, 0.2);
+  }
+
+  h3,
+  a {
+    color: map-get(vars.$dark-theme, 'primary');
+  }
+}
+
+.navbar.header {
+  height: map-get(vars.$sizes, 'header-height');
+  background-color: map-get(vars.$light-theme, 'header-bg');
+  color: map-get(vars.$light-theme, 'header-text');
+  transition: vars.$default-transition;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get(vars.$light-theme, 'header-text') !important;
+  }
+}
+
+// Mörkt tema
+.dark-mode .navbar.header {
+  background-color: map-get(vars.$dark-theme, 'header-bg');
+  color: map-get(vars.$dark-theme, 'header-text');
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: map-get(vars.$dark-theme, 'header-text') !important;
+  }
+}
+
+.hero {
+  background: map-get(vars.$light-theme, 'gray-100');
+}
+
+.dark-mode .hero {
+  background: map-get(vars.$dark-theme, 'bg');
+}
+
+section.features {
+  &:nth-child(odd) {
+    background: map-get(vars.$light-theme, 'bg');
+  }
+  &:nth-child(even) {
+    background: map-get(vars.$light-theme, 'white');
+  }
+}
+
+.dark-mode section.features {
+  &:nth-child(odd) {
+    background: map-get(vars.$dark-theme, 'bg');
+  }
+  &:nth-child(even) {
+    background: map-get(vars.$dark-theme, 'footer-bg');
   }
 }

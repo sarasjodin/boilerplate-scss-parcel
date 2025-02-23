@@ -2,41 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .navbar.header {
-  height: map-get($sizes, 'header-height');
-  background-color: map-get($light-theme, 'header-bg');
-  color: map-get($light-theme, 'header-text');
-  transition: $default-transition;
   @include flex-center;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
-  a {
-    color: map-get($light-theme, 'header-text') !important;
-  }
   @include respond-to('md') {
     padding: 20px;
-  }
-}
-
-// Mörkt tema
-.dark-mode .navbar.header {
-  background-color: map-get($dark-theme, 'header-bg');
-  color: map-get($dark-theme, 'header-text');
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
-  a {
-    color: map-get($dark-theme, 'header-text') !important;
   }
 }
 

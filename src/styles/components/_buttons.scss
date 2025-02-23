@@ -1,34 +1,10 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-button {
-  transition: $button-transition;
-}
-
 .button {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1rem;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  text-shadow: $text-shadow;
-
-  &.primary {
-    background-color: map-get($light-theme, 'primary');
-    color: white;
-
-    &:hover {
-      background-color: darken(map-get($light-theme, 'secondary'), 10%);
-    }
-  }
-
-  &.secondary {
-    background-color: map-get($light-theme, 'accent');
-    color: white;
-
-    &:hover {
-      background-color: darken(map-get($light-theme, 'error'), 10%);
-    }
-  }
 }
