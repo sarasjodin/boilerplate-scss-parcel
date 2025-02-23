@@ -1,23 +1,18 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
 
 .footer {
   display: flex;
   justify-content: space-around;
-  background: map-get($light-theme, 'footer-bg');
-  color: map-get($light-theme, 'footer-text');
-  transition: $default-transition;
+  background: map-get(vars.$light-theme, 'footer-bg');
+  color: map-get(vars.$light-theme, 'footer-text');
+  transition: vars.$default-transition;
   padding: 20px;
   text-align: left;
 
   h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
   a {
-    color: map-get($light-theme, 'footer-text');
+    color: map-get(vars.$light-theme, 'primary');
   }
 
   .social-icons {
@@ -37,7 +32,7 @@
   h2 {
     font-size: 1.4rem;
     line-height: 1.2;
-    color: map-get($light-theme, 'footer-text');
+    color: map-get(vars.$light-theme, 'footer-text');
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25),
       0 0 4px rgba(255, 255, 255, 0.2);
     padding-bottom: 0.5rem;
@@ -75,10 +70,17 @@ footer li {
   font-size: 1rem;
 }
 
+.footer .menu a:hover {
+  color: darkorange;
+  background-color: rgba(255, 255, 255, 0.721);
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
 // Mörkt tema
 .dark-mode .footer {
-  background: map-get($dark-theme, 'footer-bg');
-  color: map-get($dark-theme, 'footer-text');
+  background: map-get(vars.$dark-theme, 'footer-bg');
+  color: map-get(vars.$dark-theme, 'footer-text');
   h1,
   h2,
   h3,
@@ -88,6 +90,6 @@ footer li {
   p,
   li,
   a {
-    color: map-get($dark-theme, 'footer-text');
+    color: map-get(vars.$dark-theme, 'footer-text');
   }
 }

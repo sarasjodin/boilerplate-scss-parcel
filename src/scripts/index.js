@@ -2,21 +2,21 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
+  const menu = document.querySelector('.nav .menu'); // Adjusted selector to be more specific
 
-  // Öppna/stäng hamburgermeny
+  // Toggle the active class when the hamburger menu is clicked
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
 
-  // Stäng hamburgermeny genom att klicka utanför
+  // Close the menu when clicking outside of it
   document.addEventListener('click', (e) => {
     if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
       menu.classList.remove('active');
     }
   });
 
-  // Dropdown-meny för "Produkter"
+  // Dropdown for Portfolio Items
   const dropdowns = document.querySelectorAll('.dropdown');
 
   dropdowns.forEach((dropdown) => {
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
 
 // Byt tema
 const themeToggle = document.getElementById('theme-toggle');
