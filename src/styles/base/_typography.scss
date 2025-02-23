@@ -15,12 +15,11 @@ h3,
   font-family: vars.$font-inter;
 }
 
-
-
 // Specifika rubrikstilar
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 h2 {
@@ -41,6 +40,11 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+li,
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
 }

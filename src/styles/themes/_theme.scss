@@ -1,24 +1,33 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
 
 body {
   background-color: map-get(vars.$light-theme, 'bg');
   color: map-get(vars.$light-theme, 'text');
-  transition: vars.$default-transition;
 }
 
 // Generic dark mode
 .dark-mode {
   background-color: map-get(vars.$dark-theme, 'bg');
   color: map-get(vars.$dark-theme, 'text');
-  transition: vars.$default-transition;
+  /* transition: vars.$default-transition; */
 }
 
 // Typography
 h1,
 h2,
-h3,
-a {
+h3 {
   color: map-get(vars.$light-theme, 'primary');
+}
+
+footer h2 {
+  color: black;
+  font-style: bold;
+}
+
+.dark-mode footer h2 {
+  color: white;
+  font-weight: bold;
 }
 
 p,
@@ -28,13 +37,12 @@ li {
 
 .dark-mode h1,
 .dark-mode h2,
-.dark-mode h3,
-.dark-mode a {
-  color: map-get(vars.$dark-theme, 'primary') !important;
+.dark-mode h3 {
+  color: map-get(vars.$dark-theme, 'primary');
 }
 .dark-mode p,
 .dark-mode li {
-  color: map-get(vars.$dark-theme, 'text') !important;
+  color: map-get(vars.$dark-theme, 'text');
 }
 
 // Navbar
@@ -47,10 +55,6 @@ li {
 }
 
 .dark-mode {
-  background-color: map-get(vars.$dark-theme, 'bg');
-  color: map-get(vars.$dark-theme, 'text');
-  transition: vars.$default-transition;
-
   .features {
     background-color: map-get(vars.$dark-theme, 'header-bg');
     color: map-get(vars.$dark-theme, 'header-text');
@@ -117,7 +121,12 @@ button {
   }
 }
 
-.footer {
+.dark-mode .footer {
+  color: #e5e7eb;
+  background-color: #1f2937;
+}
+
+/* .footer {
   background: map-get(vars.$light-theme, 'footer-bg');
   color: map-get(vars.$light-theme, 'footer-text');
   transition: vars.$default-transition;
@@ -140,7 +149,7 @@ button {
   transition: vars.$default-transition;
 
   h2 {
-    color: map-get(vars.$dark-theme, 'header-text');
+    color: map-get(vars.$dark-theme, 'header-text') !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25),
       0 0 4px rgba(255, 255, 255, 0.2);
   }
@@ -149,13 +158,68 @@ button {
   a {
     color: map-get(vars.$dark-theme, 'primary');
   }
+} */
+
+a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: map-get(vars.$light-theme, 'link-color');
+
+  &:hover {
+    color: black;
+    text-shadow: vars.$text-shadow;
+  }
+
+  &:active {
+    color: map-get(vars.$light-theme, 'link-active-color') !important;
+    background-color: map-get(vars.$light-theme, 'primary');
+  }
+
+  &:focus-visible {
+    outline: 2px dashed map-get(vars.$light-theme, 'focus-color');
+  }
+}
+
+.dark-mode {
+  a {
+    color: map-get(vars.$dark-theme, 'link-color');
+
+    &:hover {
+      color: white;
+      /* color: lighten(map-get(vars.$dark-theme, 'link-color'), 20%); */
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.371);
+    }
+
+    &:active {
+      color: map-get(vars.$dark-theme, 'link-active-color') !important;
+      background-color: map-get(vars.$dark-theme, 'primary');
+    }
+
+    &:active:hover {
+      color: lighten(map-get(vars.$dark-theme, 'link-active-hover-color'), 20%);
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.371);
+    }
+
+    &:focus-visible {
+      outline: 2px dashed map-get(vars.$dark-theme, 'focus-color');
+    }
+  }
+}
+
+.menu-item.active a {
+  color: rgb(0, 0, 0);
+  text-shadow: vars.$text-shadow;
+}
+
+.dark-mode {
+  .menu-item.active a {
+    color: map-get(vars.$dark-theme, 'text');
+    text-shadow: vars.$text-shadow;
+  }
 }
 
 .navbar.header {
-  height: map-get(vars.$sizes, 'header-height');
   background-color: map-get(vars.$light-theme, 'header-bg');
   color: map-get(vars.$light-theme, 'header-text');
-  transition: vars.$default-transition;
   h1,
   h2,
   h3,
@@ -163,8 +227,7 @@ button {
   h5,
   h6,
   p,
-  li,
-  a {
+  li {
     color: map-get(vars.$light-theme, 'header-text') !important;
   }
 }
@@ -180,8 +243,7 @@ button {
   h5,
   h6,
   p,
-  li,
-  a {
+  li {
     color: map-get(vars.$dark-theme, 'header-text') !important;
   }
 }
@@ -208,6 +270,6 @@ section.features {
     background: map-get(vars.$dark-theme, 'bg');
   }
   &:nth-child(even) {
-    background: map-get(vars.$dark-theme, 'footer-bg');
+    background: map-get(vars.$dark-theme, 'section-bg');
   }
 }

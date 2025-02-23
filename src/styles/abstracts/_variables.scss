@@ -64,7 +64,12 @@ $light-theme: (
   'header-bg': #f3f4f6,
   'header-text': #1f2937,
   'footer-bg': #e5e7eb,
-  'footer-text': #223146
+  'footer-text': #223146,
+  'link-color': #1f6fc7,
+  'link-hover-color': #d2620d,
+  'link-active-color': white,
+  'link-active-hover-color': #4afd6e,
+  'focus-color': #ff0000
 );
 
 // Teman
@@ -73,7 +78,7 @@ $dark-theme: (
   // Bakgrundsfärg
   'text': #e5e7eb,
   // Standardtext
-  'primary': #2b7aaf,
+  'primary': #539fd1,
   // Primärfärg (t.ex. knappar, länkar)
   'secondary': #c5e0b3,
   // Sekundärfärg (t.ex. highlights)
@@ -83,13 +88,22 @@ $dark-theme: (
   // Felmeddelanden
   // Header & Footer
   'header-bg': #1f2937,
+  // Header och Footer bkg
   'header-text': #e5e7eb,
-  'footer-bg': #111827,
-  'footer-text': #e5e7eb
+  'footer-bg': #1f2937,
+  'section-bg': #212e40,
+  // Header och Footer bkg
+  'footer-text': #e5e7eb,
+  'link-color': #2b7aaf,
+  'link-hover-color': #fd984a,
+  'link-active-color': white,
+  'link-active-hover-color': #4afd6e,
+  'focus-color': #ff0000
 );
 
 // Standard transitions
-$default-transition: background-color 0.3s ease, color 0.3s ease;
+/* $default-transition: background-color 0.3s ease, color 0.3s ease;
+ */
 $icon-transition: background-color 0.3s ease, transform 0.3s ease;
 $button-transition: background-color 0.3s ease, color 0.3s ease,
   border 0.3s ease;
@@ -98,7 +112,7 @@ $button-transition: background-color 0.3s ease, color 0.3s ease,
 $fade-duration: 0.5s;
 $fade-animation: fade-in $fade-duration forwards;
 
-$text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+$text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
 // Keyframe för fade-in
 @keyframes fade-in {

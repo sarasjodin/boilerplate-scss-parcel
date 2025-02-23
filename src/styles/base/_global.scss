@@ -15,22 +15,6 @@ main {
   padding: 40px 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p,
-li {
-  font-size: 1.2rem;
-}
-
-
-
 .features ul {
   padding: 10px 30px;
 
@@ -51,6 +35,7 @@ section {
   margin-bottom: 40px;
 }
 
-h1 {
-  font-size: 3rem;
+a {
+  border-radius: 8px;
+  padding: 2px 8px;
 }

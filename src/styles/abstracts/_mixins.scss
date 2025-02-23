@@ -73,3 +73,32 @@
   }
 }
 
+@mixin metallic-bkg {
+  --shine-deg: 45deg;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.875rem;
+  padding: 4rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom, #dbdbdb, #f9f9f9, #dbdbdb);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      30deg,
+      transparent 20%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.4) 55%,
+      transparent 70%,
+      transparent 100%
+    );
+    transform: translateX(100%) rotate(var(--shine-deg));
+    transition: transform 2s ease-in;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
