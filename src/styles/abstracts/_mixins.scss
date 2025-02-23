@@ -58,9 +58,18 @@
   justify-content: center;
 }
 
-// Media Query Mixin
-@mixin responsive($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
-    @content;
+@mixin respond-to($breakpoint) {
+  // Hämtar värdet för den angivna breakpointen
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  // Om ett värde hittas, använd det i en media query
+  @if $breakpoint-value {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    // Om ingen matchning hittas, ge en varning
+    @warn "Breakpoint `#{$breakpoint}` finns inte definierat i \$breakpoints.";
   }
 }
+

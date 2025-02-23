@@ -18,6 +18,9 @@
   a {
     color: map-get($light-theme, 'header-text') !important;
   }
+  @include respond-to('md') {
+    padding: 20px;
+  }
 }
 
 // Mörkt tema
