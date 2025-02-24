@@ -7,3 +7,8 @@
 .dark-mode #process-page .hero {
   background: map-get(vars.$dark-theme, 'bg');
 }
+
+.features {
+  max-width: 100%;
+  overflow-x: auto; /* Gör att det går att rulla horisontellt om texten är för lång */
+}

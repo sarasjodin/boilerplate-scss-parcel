@@ -194,10 +194,10 @@
           <pre>
             <code>
               📂 styles
-              ├── 📂 abstracts/          # Variables, mixins, functions (No direct CSS output)
+              ├── 📂 abstracts/          # Variables, mixins, functions
               │   ├──📄 _variables.scss    # Fonts, colors, spacing
               │   ├──📄 _mixins.scss       # Reusable mixins
-              │   └──📄 _functions.scss    # Sass functions (if needed)
+              │   └──📄 _functions.scss    # Sass functions
               ├── 📂 base/               # Base styles
               │   ├──📄 _reset.scss        # CSS reset or Normalize.css
               │   ├──📄 _typography.scss   # Global typography styles
@@ -217,7 +217,7 @@
               │   └──📄 _process.scss      # Process page styling
               ├── 📂 themes/             # Theme styles
               │   └──📄 _theme.scss         # Light & Dark mode styles
-              └📄 main.scss               # Main SCSS file importing everything
+              └📄 main.scss               # Main SCSS file
             </code>
           </pre>
         </section>
@@ -443,10 +443,20 @@
           <h2>My policies</h2>
           <nav aria-label="Legal Policies">
             <ul class="menu">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Accessibility Statement</a></li>
+              <li class="menu-item">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="./cookie-policy.html">Cookie Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="./terms-of-service.html">Terms of Service</a>
+              </li>
+              <li class="menu-item">
+                <a href="./accessibility-statement.html"
+                  >Accessibility Statement</a
+                >
+              </li>
             </ul>
           </nav>
         </div>

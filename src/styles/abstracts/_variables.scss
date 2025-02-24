@@ -66,8 +66,8 @@ $light-theme: (
   'footer-bg': #e5e7eb,
   'footer-text': #223146,
   'link-color': #1f6fc7,
-  'link-hover-color': #d2620d,
-  'link-active-color': white,
+  'link-hover-color': #cc860c,
+  'link-active-color': rgb(0, 0, 0),
   'link-active-hover-color': #4afd6e,
   'focus-color': #ff0000
 );
@@ -78,11 +78,11 @@ $dark-theme: (
   // Bakgrundsfärg
   'text': #e5e7eb,
   // Standardtext
-  'primary': #539fd1,
+  'primary': #1f6fc7,
   // Primärfärg (t.ex. knappar, länkar)
-  'secondary': #c5e0b3,
+  'secondary': #426683,
   // Sekundärfärg (t.ex. highlights)
-  'accent': #e467e7,
+  'accent': #4ec4d1,
   // Accentfärg (t.ex. hover-effekter, CTA)
   'error': #ed8b8b,
   // Felmeddelanden
@@ -90,12 +90,12 @@ $dark-theme: (
   'header-bg': #1f2937,
   // Header och Footer bkg
   'header-text': #e5e7eb,
-  'footer-bg': #1f2937,
+  'footer-bg': #000000,
   'section-bg': #212e40,
   // Header och Footer bkg
   'footer-text': #e5e7eb,
-  'link-color': #2b7aaf,
-  'link-hover-color': #fd984a,
+  'link-color': #8ad0ff,
+  'link-hover-color': #94eff9,
   'link-active-color': white,
   'link-active-hover-color': #4afd6e,
   'focus-color': #ff0000

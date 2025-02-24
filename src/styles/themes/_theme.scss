@@ -38,7 +38,7 @@ li {
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3 {
-  color: map-get(vars.$dark-theme, 'primary');
+  color: map-get(vars.$dark-theme, 'accent');
 }
 .dark-mode p,
 .dark-mode li {
@@ -89,11 +89,11 @@ button {
   }
 
   &.secondary {
-    background-color: map-get(vars.$light-theme, 'secondary');
+    background-color: map-get(vars.$light-theme, 'accent');
     color: map-get(vars.$light-theme, 'white');
 
     &:hover {
-      background-color: darken(map-get(vars.$light-theme, 'secondary'), 20%);
+      background-color: darken(map-get(vars.$light-theme, 'accent'), 10%);
     }
   }
 }
@@ -165,13 +165,11 @@ a {
   color: map-get(vars.$light-theme, 'link-color');
 
   &:hover {
-    color: black;
-    text-shadow: vars.$text-shadow;
+    color: map-get(vars.$light-theme, 'link-hover-color');
   }
 
   &:active {
     color: map-get(vars.$light-theme, 'link-active-color') !important;
-    background-color: map-get(vars.$light-theme, 'primary');
   }
 
   &:focus-visible {
@@ -184,14 +182,12 @@ a {
     color: map-get(vars.$dark-theme, 'link-color');
 
     &:hover {
-      color: white;
-      /* color: lighten(map-get(vars.$dark-theme, 'link-color'), 20%); */
+      color: map-get(vars.$dark-theme, 'link-hover-color');
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.371);
     }
 
     &:active {
       color: map-get(vars.$dark-theme, 'link-active-color') !important;
-      background-color: map-get(vars.$dark-theme, 'primary');
     }
 
     &:active:hover {
@@ -207,7 +203,6 @@ a {
 
 .menu-item.active a {
   color: rgb(0, 0, 0);
-  text-shadow: vars.$text-shadow;
 }
 
 .dark-mode {
@@ -253,7 +248,7 @@ a {
 }
 
 .dark-mode .hero {
-  background: map-get(vars.$dark-theme, 'bg');
+  background: map-get(vars.$dark-theme, 'footer-bg');
 }
 
 section.features {
