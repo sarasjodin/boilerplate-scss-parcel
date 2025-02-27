@@ -1,35 +1,42 @@
 /* import '../styles/main.scss'; */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav .menu'); // Adjusted selector to be more specific
+  const nav = document.querySelector('.nav');
+  const menu = document.querySelector('.nav .menu'); // Huvudmenyn
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-  // Toggle the active class when the hamburger menu is clicked
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+  // Toggle den aktiva klassen vid klick på HB meny
+  menuToggle.addEventListener('click', (e) => {
+    const isOpen = nav.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    e.stopPropagation();
   });
 
-  // Close the menu when clicking outside of it
+  // Stänger HB menyn vid klick utanför
   document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-      menu.classList.remove('active');
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
     }
   });
 
-  // Dropdown for Portfolio Items
-  const dropdowns = document.querySelectorAll('.dropdown');
-
+  // Dropdown för Portfolio Items
   dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener('mouseenter', () => {
-      dropdown.querySelector('.dropdown-menu').style.display = 'block';
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+    dropdown.addEventListener('click', (e) => {
+      dropdownMenu.classList.toggle('show');
     });
 
-    dropdown.addEventListener('mouseleave', () => {
-      dropdown.querySelector('.dropdown-menu').style.display = 'none';
+    // Stänger dropdown vid klick utanför
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+      }
     });
   });
 });
-
 
 // Byt tema
 const themeToggle = document.getElementById('theme-toggle');
@@ -69,3 +76,5 @@ document.addEventListener('DOMContentLoaded', function () {
   // Uppdatera synlig text
   phoneLink.textContent = '📞 ' + phoneNumber + ' (Italy)';
 });
+
+getComputedStyle(document.querySelector('.nav')).height;

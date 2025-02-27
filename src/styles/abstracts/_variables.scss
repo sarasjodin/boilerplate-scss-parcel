@@ -52,7 +52,7 @@ $light-theme: (
   // Bakgrundsfärg
   'text': #1f2937,
   // Standardtext
-  'primary': #1f6fc7,
+  /* 'primary': #1f6fc7, */ 'primary': #01458e,
   // Primärfärg (t.ex. knappar, länkar)
   'secondary': #26fadc,
   // Sekundärfärg (t.ex. highlights)
@@ -66,7 +66,7 @@ $light-theme: (
   'footer-bg': #e5e7eb,
   'footer-text': #223146,
   'link-color': #1f6fc7,
-  'link-hover-color': #cc860c,
+  'link-hover-color': #f86700,
   'link-active-color': rgb(0, 0, 0),
   'link-active-hover-color': #4afd6e,
   'focus-color': #ff0000
@@ -97,7 +97,7 @@ $dark-theme: (
   'link-color': #8ad0ff,
   'link-hover-color': #94eff9,
   'link-active-color': white,
-  'link-active-hover-color': #4afd6e,
+  'link-active-hover-color': white,
   'focus-color': #ff0000
 );
 
@@ -112,7 +112,10 @@ $button-transition: background-color 0.3s ease, color 0.3s ease,
 $fade-duration: 0.5s;
 $fade-animation: fade-in $fade-duration forwards;
 
-$text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+$text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+$box-shadow-light: 10px 5px 20px rgba(0, 0, 0, 0.4);
+$box-shadow-dark: 10px 5px 20px rgba(0, 0, 0, 0.9);
 
 // Keyframe för fade-in
 @keyframes fade-in {

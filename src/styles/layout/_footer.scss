@@ -3,13 +3,25 @@
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   padding: 20px;
-  text-align: left;
+  text-align: center;
+
+  .legal-footer-section,
+  .company-footer-info,
+  .company-footer-contact,
+  .social-footer-menu,
+  .legal-footer-menu,
+  .menu-footer {
+    width: 100%;
+  }
 
   .social-icons {
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    gap: 12px;
   }
 
   ul {
@@ -17,7 +29,6 @@
   }
 
   .company-footer-info address ul {
-    list-style: unset;
     padding-left: 25px;
   }
 
@@ -53,6 +64,93 @@
   .social-footer-menu h2 {
     margin-top: 15px;
   }
+
+  @include mixin.respond-to('md') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    align-items: start;
+
+    .legal-footer-section,
+    .company-footer-info,
+    .company-footer-contact,
+    .social-footer-menu,
+    .legal-footer-menu,
+    .menu-footer {
+      width: 30%;
+    }
+
+    .social-icons {
+      justify-content: flex-start;
+    }
+  }
+
+  @include mixin.respond-to('lg') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    align-items: start;
+
+    .legal-footer-section,
+    .company-footer-info,
+    .company-footer-contact,
+    .social-footer-menu,
+    .legal-footer-menu,
+    .menu-footer {
+      width: 14%;
+    }
+
+    .social-icons {
+      justify-content: flex-start;
+    }
+  }
+
+  @include mixin.respond-to('xl') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    align-items: start;
+
+    .legal-footer-section,
+    .company-footer-info,
+    .company-footer-contact,
+    .social-footer-menu,
+    .legal-footer-menu,
+    .menu-footer {
+      width: 14%;
+    }
+
+    .social-icons {
+      justify-content: flex-start;
+    }
+  }
+
+  @include mixin.respond-to('xxl') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    align-items: start;
+
+    .legal-footer-section,
+    .company-footer-info,
+    .company-footer-contact,
+    .social-footer-menu,
+    .legal-footer-menu,
+    .menu-footer {
+      width: 14%;
+    }
+
+    .social-icons {
+      justify-content: flex-start;
+    }
+    max-width: 1600px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
 }
 
 footer p,
@@ -66,4 +164,10 @@ footer li:last-child {
 
 .footer .menu a:hover {
   border-radius: 8px;
+}
+
+a[href^='mailto'] {
+  word-break: break-word; // Bryter ordet om det behövs
+  overflow-wrap: break-word; // Gör att e-post kan brytas naturligt
+  display: inline-block; // Säkerställer att länken bryts korrekt
 }

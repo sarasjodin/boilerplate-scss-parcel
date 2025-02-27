@@ -1,11 +1,7 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
 
 .header .menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-
   li {
     position: relative;
 
@@ -27,8 +23,35 @@
       list-style: none;
     }
 
+    .dropdown-menu.show {
+      display: contents;
+    }
+
     a {
       display: inline-block;
+    }
+  }
+}
+
+.header .menu {
+  .menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    .menu-item {
+      display: block;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -36,4 +59,18 @@
 .footer .menu a {
   text-decoration: none;
   display: block;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+}
+
+@include mixin.respond-to('lg') {
+  .header .menu .dropdown .dropdown-menu.show {
+    display: block;
+  }
 }

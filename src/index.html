@@ -17,7 +17,7 @@
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
@@ -73,8 +73,13 @@
           </div> -->
 
           <!-- Hamburgermeny-knapp -->
-          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
-
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
           <!-- Navigationsmeny -->
           <nav class="nav">
             <ul class="menu">
@@ -226,7 +231,6 @@
           </div>
         </section>
       </main>
-
       <footer class="footer">
         <div class="legal-footer-section">
           <div>

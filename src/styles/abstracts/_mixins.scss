@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 
-@mixin icon-hover($theme: $light-theme, $scale: 1.1) {
+@mixin icon-hover($theme: vars.$light-theme, $scale: 1.1) {
   &:hover {
     background-color: map-get($theme, 'accent') !important;
     transform: scale($scale);
@@ -28,7 +28,7 @@
 }
 
 // Mixin helvit ikon
-@mixin icon-white($theme: $light-theme, $size: 36px) {
+@mixin icon-white($theme: vars.$light-theme, $size: 36px) {
   @include icon-base($size);
   background-color: map-get($theme, 'primary');
 
@@ -40,7 +40,7 @@
 }
 
 // Mixin svartvit ikon
-@mixin icon-bw($theme: $light-theme, $size: 36px) {
+@mixin icon-bw($theme: vars.$light-theme, $size: 36px) {
   @include icon-base($size);
   background-color: map-get($theme, 'primary') !important;
 
@@ -55,7 +55,6 @@
 @mixin flex-center {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 @mixin respond-to($breakpoint) {
@@ -70,35 +69,5 @@
   } @else {
     // Om ingen matchning hittas, ge en varning
     @warn "Breakpoint `#{$breakpoint}` finns inte definierat i \$breakpoints.";
-  }
-}
-
-@mixin metallic-bkg {
-  --shine-deg: 45deg;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.875rem;
-  padding: 4rem 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to bottom, #dbdbdb, #f9f9f9, #dbdbdb);
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(
-      30deg,
-      transparent 20%,
-      transparent 40%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0.4) 55%,
-      transparent 70%,
-      transparent 100%
-    );
-    transform: translateX(100%) rotate(var(--shine-deg));
-    transition: transform 2s ease-in;
-    z-index: 1;
-    pointer-events: none;
   }
 }
