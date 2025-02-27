@@ -171,3 +171,7 @@ a[href^='mailto'] {
   overflow-wrap: break-word; // Gör att e-post kan brytas naturligt
   display: inline-block; // Säkerställer att länken bryts korrekt
 }
+
+body > div > footer > div.menu-footer > nav > ul > li:nth-child(5) > a {
+  padding: 10px 15px;
+}

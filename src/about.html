@@ -16,7 +16,7 @@
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
@@ -72,7 +72,13 @@
           </div> -->
 
           <!-- Hamburgermeny-knapp -->
-          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
 
           <!-- Navigationsmeny -->
           <nav class="nav">
@@ -82,7 +88,7 @@
               <li class="menu-item"><a href="./sass.html">Sass</a></li>
               <li class="menu-item"><a href="./process.html">Process</a></li>
               <li class="dropdown">
-                <a href="#">Portfolio Items ▾</a>
+                <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
                   <li>
                     <a
@@ -126,11 +132,12 @@
           <div class="hero-content">
             <h1>About me</h1>
             <p>
-              Hi! My name is Sara Sjödin Scolari.<br />I am a passionate web
-              developer specializing in frontend and modern web solutions. With
-              experience in HTML, CSS, JavaScript, SCSS, and modern build tools
-              like Parcel, I create fast, responsive, and visually appealing
-              websites.
+              Hi! I'm Sara Sjödin Scolari, a passionate full-stack web developer
+              specializing in modern web solutions. With expertise in HTML, CSS,
+              JavaScript, SCSS, and SQL databases, I craft fast, responsive, and
+              visually engaging websites. I also focus on image and video
+              optimization and leverage cutting-edge build tools like Parcel to
+              enhance performance and user experience.
             </p>
           </div>
         </section>
@@ -140,7 +147,7 @@
             <ul>
               <li>
                 <strong>✔ Pixel-perfect design</strong><br />I transform ideas
-                into sleek, responsive websites.
+                into responsive websites.
               </li>
               <li>
                 <strong>✔ Performance and SEO optimization</strong><br />Fast

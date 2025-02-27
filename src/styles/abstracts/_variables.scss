@@ -52,7 +52,7 @@ $light-theme: (
   // Bakgrundsfärg
   'text': #1f2937,
   // Standardtext
-  /* 'primary': #1f6fc7, */ 'primary': #01458e,
+  /* 'primary': #1f6fc7, */ 'primary': #0060c7,
   // Primärfärg (t.ex. knappar, länkar)
   'secondary': #26fadc,
   // Sekundärfärg (t.ex. highlights)
@@ -100,6 +100,15 @@ $dark-theme: (
   'link-active-hover-color': white,
   'focus-color': #ff0000
 );
+
+// Colors used for my color function cards
+$base-color: #3498db; // Blue
+$saturated: saturate($base-color, 30%);
+$desaturated: desaturate($base-color, 30%);
+$hue-adjusted: adjust-hue($base-color, 45deg);
+$rgba-color: rgba($base-color, 0.5);
+$mixed-color: mix($base-color, #ff5733, 50%);
+$inverted-color: invert($base-color);
 
 // Standard transitions
 /* $default-transition: background-color 0.3s ease, color 0.3s ease;

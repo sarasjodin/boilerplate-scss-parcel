@@ -17,7 +17,7 @@
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
@@ -73,7 +73,13 @@
           </div> -->
 
           <!-- Hamburgermeny-knapp -->
-          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
 
           <!-- Navigationsmeny -->
           <nav class="nav">
@@ -83,7 +89,7 @@
               <li class="menu-item active"><a href="#">Sass</a></li>
               <li class="menu-item"><a href="./process.html">Process</a></li>
               <li class="dropdown">
-                <a href="#">Portfolio Items ▾</a>
+                <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
                   <li>
                     <a
@@ -92,7 +98,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open AI Poem Generator in a new tab"
                     >
-                      AI Poem Generator 🔗
+                      AI poem generator 🔗
                     </a>
                   </li>
                   <li>
@@ -102,7 +108,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open Weather App in a new tab"
                     >
-                      Weather App 🔗
+                      Weather app 🔗
                     </a>
                   </li>
                   <li>
@@ -112,7 +118,7 @@
                       rel="noopener noreferrer"
                       aria-label="Open Time Zone Converter in a new tab"
                     >
-                      Time Zone Converter 🔗
+                      Time zone converter 🔗
                     </a>
                   </li>
                 </ul>
@@ -120,22 +126,22 @@
             </ul>
           </nav>
         </div>
-        <button class="primary button" id="theme-toggle">🌙 Dark Mode</button>
+        <button class="primary button" id="theme-toggle">🌙 Dark mode</button>
       </header>
       <main id="sass-page">
         <section class="hero">
           <div class="hero-content">
-            <h1>More About My "Sassy Website"</h1>
+            <h1>More about my "Sassy Website"</h1>
             <p>
               This project is part of the Web Development program at Mid Sweden
-              University and involves creating a website using Node.js, NPM,
-              Parcel, and Sass (SCSS).
+              University and involves creating a website using<br />Node.js,
+              NPM, Parcel, Sass (SCSS) utilising the 7-1 method.
             </p>
           </div>
         </section>
         <section class="features">
           <div>
-            <h2>Purpose of the Assignment</h2>
+            <h2>Purpose of the assignment</h2>
             <ul>
               <li>Understand the purpose of CSS preprocessors.</li>
               <li>Learn how to use SASS to simplify CSS development.</li>
@@ -151,7 +157,7 @@
         </section>
         <section class="features">
           <div>
-            <h2>Minimum Requirements</h2>
+            <h2>Minimum requirements</h2>
             <ul>
               <li>
                 A simple, fictional website with at least five menu options (not
@@ -169,11 +175,11 @@
                 variables).
               </li>
               <li>
-                Color functions (at minimum, `darken` and `lighten` should be
+                Color functions (at minimum, "darken" and "lighten" should be
                 used, but more are encouraged).
               </li>
               <li>
-                Nesting, Mixins, and Selector Inheritance (using the `@extend`
+                Nesting, Mixins, and Selector Inheritance (using the "@extend"
                 keyword).
               </li>
               <li>
@@ -189,7 +195,7 @@
         </section>
         <section class="features">
           <div>
-            <h2>My Evaluation</h2>
+            <h2>My evaluation</h2>
             <p>
               Sass extends the functionality of regular CSS by introducing
               powerful features that make styling more efficient, maintainable,
@@ -197,10 +203,10 @@
               include:
             </p>
 
-            <h3>Pros of the CSS Preprocessor Sass</h3>
+            <h3>Pros of the CSS preprocessor Sass</h3>
             <ul>
               <li>
-                <strong>Better Organization</strong><br />Using partials and
+                <strong>Better organization</strong><br />Using partials and
                 imports allows for a structured and modular CSS approach.
               </li>
               <li>
@@ -212,48 +218,49 @@
                 avoid code repetition and improve maintainability.
               </li>
               <li>
-                <strong>Selector Inheritance (`@extend`)</strong><br />Helps in
+                <strong>Selector inheritance @extend</strong><br />Helps in
                 reducing redundancy by allowing shared styles between elements.
               </li>
               <li>
-                <strong>Functions & Nesting</strong><br />Improves readability
+                <strong>Functions & nesting</strong><br />Improves readability
                 and makes it easier to write CSS with logical hierarchy.
               </li>
               <li>
-                <strong>Math Operations</strong><br />Enables calculations
+                <strong>Math operations</strong><br />Enables calculations
                 directly in CSS, such as adjusting padding or font sizes
                 dynamically.
               </li>
             </ul>
 
-            <h3>Cons of the CSS Preprocessor Sass</h3>
+            <h3>Cons of the CSS preprocessor Sass</h3>
             <ul>
               <li>
-                <strong>Learning Curve</strong><br />While Sass simplifies many
+                <strong>Learning curve</strong><br />While Sass simplifies many
                 CSS tasks, beginners may find it overwhelming at first.
               </li>
               <li>
-                <strong>Compilation Required</strong><br />Unlike standard CSS,
+                <strong>Compilation required</strong><br />Unlike standard CSS,
                 Sass needs to be compiled into regular CSS before it can be used
                 in the browser. Parcel is taking care of that for this website.
               </li>
               <li>
-                <strong>Can Encourage Overuse</strong><br />Nesting too deeply
+                <strong>Can encourage overuse</strong><br />Nesting too deeply
                 can lead to overly specific and difficult-to-maintain styles.
               </li>
               <li>
-                <strong>Tooling Dependency</strong><br />Requires Node.js, npm,
-                and build tools like Parcel or Webpack, which adds complexity.
+                <strong>Tooling dependency</strong><br />Requires Node.js, npm,
+                and build tools like Parcel, Webpack or Vite, which adds
+                complexity.
               </li>
             </ul>
           </div>
         </section>
         <section class="features">
           <div>
-            <h3>How Was It to Get Started Working with a CSS Preprocessor?</h3>
+            <h3>How was it to get started working with a CSS preprocessor?</h3>
 
             <article>
-              <h4>The Initial Challenge</h4>
+              <h4>The initial challenge</h4>
               <p>
                 Transitioning from regular CSS to Sass was initially
                 overwhelming due to the new syntax and additional setup
@@ -265,39 +272,37 @@
             </article>
 
             <article>
-              <h4>The Learning Curve</h4>
+              <h4>The learning curve</h4>
               <p>
                 As I became more comfortable with
                 <strong>variables, mixins, and nesting</strong>, I quickly
                 realized the immense benefits of Sass. The ability to store and
-                reuse values significantly reduced redundancy, and nesting made
-                my stylesheets more structured and readable.
+                reuse values, and to be able to nest made me think a lot about
+                the structure and readability.
               </p>
             </article>
 
             <article>
-              <h4>Boosting Efficiency with Automation</h4>
+              <h4>Boosting efficiency with automation</h4>
               <p>
                 One of the biggest game-changers was automating the Sass
                 compilation process using <strong>Parcel</strong>. This made it
                 seamless to integrate Sass into my workflow, eliminating the
-                need for manual CSS updates and ensuring that all styles were
-                efficiently processed.
+                need for manual SCSS to CSS updates and ensuring that all styles
+                were efficiently processed.
               </p>
             </article>
 
             <article>
-              <h4>The Power of Structured Styling</h4>
+              <h4>The power of structured styling</h4>
               <p>
-                The fact that multiple stylesheets can be
-                <strong
-                  >structured and managed through a single
-                  <code>main.scss</code> file</strong
-                >
-                has made my development process much smoother. By organizing my
-                styles into different partials, I can maintain a clean and
-                scalable codebase, making future updates and modifications
-                effortless.
+                The ability to
+                <strong>structure and manage multiple stylesheets</strong>
+                within a single main.scss file has significantly streamlined my
+                development process. By organizing styles into modular partials,
+                I can maintain a clean, scalable, and **efficient** codebase,
+                making future updates seamless. I look forward to perfecting my
+                workflow and exploring new ideas.
               </p>
             </article>
           </div>

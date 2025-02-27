@@ -17,7 +17,7 @@
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
@@ -73,7 +73,13 @@
           </div> -->
 
           <!-- Hamburgermeny-knapp -->
-          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
 
           <!-- Navigationsmeny -->
           <nav class="nav">
@@ -83,7 +89,7 @@
               <li class="menu-item"><a href="./sass.html">Sass</a></li>
               <li class="menu-item"><a href="./process.html">Process</a></li>
               <li class="dropdown">
-                <a href="#">Portfolio Items ▾</a>
+                <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
                   <li>
                     <a

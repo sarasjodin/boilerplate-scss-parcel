@@ -17,7 +17,7 @@
     <script src="./scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="navbar header">
         <div class="container">
           <!-- Logo och företagsnamn -->
@@ -73,7 +73,13 @@
           </div> -->
 
           <!-- Hamburgermeny-knapp -->
-          <button class="menu-toggle" aria-label="Öppna meny">☰</button>
+          <button
+            class="menu-toggle"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
 
           <!-- Navigationsmeny -->
           <nav class="nav">
@@ -83,7 +89,7 @@
               <li class="menu-item"><a href="./sass.html">Sass</a></li>
               <li class="menu-item active"><a href="#">Process</a></li>
               <li class="dropdown">
-                <a href="#">Portfolio Items ▾</a>
+                <a href="#">Portfolio items ▾</a>
                 <ul class="dropdown-menu">
                   <li>
                     <a
@@ -134,6 +140,33 @@
         <section class="features">
           <div>
             <h2>Key Learnings</h2>
+            <ol>
+              <li>
+                I should have started simple (avoid doing the 7-1 method as my
+                first Sass assignment)
+              </li>
+              <li>
+                Some parts like the variables, nesting and simple mixins are
+                quite intuitive, other things I tested I'll have to improve with
+                time.
+              </li>
+              <li>
+                We need some time to learn new tools, but working with Scss and
+                Parcel were very intuitive.
+              </li>
+              <li>
+                I had some issues with paths to urls and images, and put a lot
+                of work in finding the perfect npm run script to clear cache and
+                rebuild quickly. I believed it saved me lots of time -
+                especially in the long run!
+              </li>
+            </ol>
+            <p>
+              Finally I have started my Sass journey ❤️ I've always been
+              interested, but I never exceeded the work load to get through with
+              a Parcel or similar automation process, without that there is no
+              reason why you should go from css to Sass.
+            </p>
           </div>
         </section>
         <section class="features">
@@ -141,8 +174,8 @@
             <h2>My Development Process</h2>
             <ol>
               <li>
-                Reused a previous boilerplate (but removed all previous css
-                code)
+                Reused a previous boilerplate (but removed all previous css code
+                and Git history)
               </li>
               <li>
                 Created the 7-1 patters for Sass and its main.scss file with
@@ -154,23 +187,43 @@
                 Offcanvas responsive menu
               </li>
               <li>
-                Realized that I was alreay developing and had to start commiting
-                to GitHub...
+                Realized that I was already developing and had to start
+                commiting to GitHub...
               </li>
               <li>Created the GitHub repository!</li>
               <li>
-                I decided to use Render for this site. But I+m also used to
-                Netlify and GitHub Pages for CI/CD deployment.
-                <a
-                  href="https://boilerplate-scss-parcel.onrender.com/"
-                  target="_blank"
-                  rel="noreferral nooperer"
-                  >My scss parcel boilerplate</a
-                >
+                I decided to use Render for the first time for this site.
+                Preeviously I've mainly used Netlify and GitHub Pages for CI/CD
+                deployment.
               </li>
               <li>
-                Decided to create a pure scss site, to avoid Bootstrap
-                dependancy problems for my first scss-site.
+                In the end I decided to create a pure scss site, to avoid
+                Bootstrap dependancy problems for my first scss-site.
+              </li>
+              <li>
+                I've cheched the requests for the assigment and started to
+                sketch down some ideas for mixins. I decided to start with a
+                mixin handling background colors, hover colors, different shapes
+                (squares and circular shapes) and sizes of social media icons. I
+                was almost able to fulfill the assignment requirement only with
+                my first Mixin...
+              </li>
+              <li>
+                The next step was to plan and prepare the pages. I decided
+                quickly the pages needed and decided to add some of my old
+                portfolio pages...to create yet another portfolio page!
+              </li>
+              <li>
+                After working some I realized that my 7-1 method wasn't very
+                well organized. So I started to dived the scss in a more strict
+                way. It felt like I would never finish.
+              </li>
+              <li>
+                At this point I started to improve the color variables, the
+                responsiveness and the header, hamburger menu and footer. I
+                ended up with a lot of color variables, because I would like to
+                create a reusable and flexible boilerplate (a boilerplated is
+                like a template) to improve with time.
               </li>
             </ol>
           </div>
@@ -186,11 +239,19 @@
               <li>light and dark theme with theme button</li>
               <li>Responsive header with a hamburger menu for mobiles</li>
               <li>Breakpoint variables for media queries</li>
+              <li>
+                Every second section has another color, to create some
+                variations and structure.
+              </li>
+              <li>Implemented primary and secondary button styles.</li>
+              <li>
+                Started to create some policy templates for the footer links.
+              </li>
             </ul>
           </div>
         </section>
         <section class="features">
-          <h2>File structure</h2>
+          <h2>A typical 7-1 method file structure</h2>
           <pre>
             <code>
               📂 styles
@@ -221,10 +282,58 @@
             </code>
           </pre>
         </section>
+        <section class="features">
+          <div class="card-grid">
+            <!-- Saturate -->
+            <div class="card saturate">
+              <h3>saturate()</h3>
+              <div class="color-box"></div>
+              <p>Increases the color intensity</p>
+              <code>$color: saturate(#3498db, 30%);</code>
+            </div>
 
-        <section class="features"><div></div></section>
+            <!-- Desaturate -->
+            <div class="card desaturate">
+              <h3>desaturate()</h3>
+              <div class="color-box"></div>
+              <p>Reduces color intensity</p>
+              <code>$color: desaturate(#3498db, 30%);</code>
+            </div>
+
+            <!-- Adjust Hue -->
+            <div class="card adjust-hue">
+              <h3>adjust-hue()</h3>
+              <div class="color-box"></div>
+              <p>Change the hue by a given degree</p>
+              <code>$color: adjust-hue(#3498db, 45deg);</code>
+            </div>
+
+            <!-- RGBA -->
+            <div class="card rgba">
+              <h3>rgba()</h3>
+              <div class="color-box"></div>
+              <p>Adds transparency</p>
+              <code>$color: rgba(#3498db, 0.5);</code>
+            </div>
+
+            <!-- Mix -->
+            <div class="card mix">
+              <h3>mix()</h3>
+              <div class="color-box"></div>
+              <p>Blends two colors</p>
+              <code>$color: mix(#3498db, #ff5733, 50%);</code>
+            </div>
+
+            <!-- Invert -->
+            <div class="card invert">
+              <h3>invert()</h3>
+              <div class="color-box"></div>
+              <p>Invert a color</p>
+              <code>$color: invert(#3498db);</code>
+            </div>
+          </div>
+        </section>
       </main>
-
       <footer class="footer">
         <div class="legal-footer-section">
           <div>

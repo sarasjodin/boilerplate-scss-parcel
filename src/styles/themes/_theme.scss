@@ -291,17 +291,3 @@ section.features {
     box-shadow: unset;
   }
 }
-
-/* @include mixin.respond-to('lg') {
-  .header .nav.active {
-    background-color: inherit;
-    color: inherit !important;
-    box-shadow: unset;
-
-    .dark-mode .header .nav.active {
-      background-color: inherit;
-      color: inherit !important;
-      box-shadow: unset;
-    }
-  }
-} */
