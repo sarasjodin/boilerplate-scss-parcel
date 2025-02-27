@@ -15,8 +15,12 @@ main {
   padding: 40px 20px;
 }
 
+.features ol,
+.features p {
+  padding: 10px 15px;
+}
 .features ul {
-  padding: 10px 30px;
+  padding: 10px 15px;
 
   li {
     padding: 5px 0;
